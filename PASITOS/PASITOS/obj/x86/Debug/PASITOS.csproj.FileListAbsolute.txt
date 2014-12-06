@@ -34,3 +34,6 @@ C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\bin\Debug\PASITOS.pdb
 C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.pdb
 C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.MenuPrincipal_P1.resources
 C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.MenuDonantesP1.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.MenuBeneficiariosP1.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.CatalogoAspirantesDcs.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.CatalogoDonantesD.resources

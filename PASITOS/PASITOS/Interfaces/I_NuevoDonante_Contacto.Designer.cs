@@ -48,8 +48,9 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(667, 23);
-            this.label1.Text = "Capturar Datos del Donante";
+            this.label1.Location = new System.Drawing.Point(15, 20);
+            this.label1.Size = new System.Drawing.Size(530, 25);
+            this.label1.Text = "Capturar Datos de Aspirante a Donante";
             // 
             // groupBox1
             // 
@@ -65,16 +66,18 @@
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Size = new System.Drawing.Size(667, 266);
+            this.groupBox1.Location = new System.Drawing.Point(15, 45);
+            this.groupBox1.Size = new System.Drawing.Size(530, 274);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(523, 307);
+            this.btnAceptar.Location = new System.Drawing.Point(392, 325);
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(604, 307);
+            this.BtnCancelar.Location = new System.Drawing.Point(473, 325);
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // label9
             // 
@@ -185,9 +188,9 @@
             // I_NuevoDonante_Contacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(691, 342);
             this.Name = "I_NuevoDonante_Contacto";
-            
+            this.Size = new System.Drawing.Size(560, 360);
+            this.Load += new System.EventHandler(this.I_NuevoDonante_Contacto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorDatos)).EndInit();

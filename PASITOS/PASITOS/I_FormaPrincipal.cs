@@ -28,16 +28,31 @@ namespace PASITOS
         
         private void I_FormaPrincipal_Load(object sender, EventArgs e)
         {
-            MenuPrincipal_P1 MenuP1 = new MenuPrincipal_P1();
-            MenuP1.DelP1 = new DelegadoP1(MostrarModuloP1);
-            MostrarModuloP1(MenuP1);
-            I_MenuPrincipal MenuP2 = new I_MenuPrincipal();
-            MostrarModuloP2(MenuP2);    
+            AccionesPanel2();   
      
+            AccionesPanel1();
+           
 
         }
 
-        // Panel 1
+        private void AccionesPanel1()
+        {
+            MenuPrincipal_P1 MenuPrincipalP1 = new MenuPrincipal_P1();
+            MenuPrincipalP1.DelP1 = new DelegadoP1(MostrarModuloP1);
+            MenuPrincipalP1.DelP2 = new DelegadoP2(MostrarModuloP2);
+            MostrarModuloP1(MenuPrincipalP1);
+        }
+        I_MenuPrincipal MenuP2;
+        private void AccionesPanel2()
+        {
+            MenuP2 = new I_MenuPrincipal();
+            MenuP2.DelP2 = new DelegadoP2(MostrarModuloP2);
+            MostrarModuloP2(MenuP2);
+        }
+
+        
+
+       
         
         
 

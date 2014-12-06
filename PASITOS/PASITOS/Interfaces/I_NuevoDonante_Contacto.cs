@@ -10,6 +10,8 @@ namespace PASITOS
 {
     public partial class I_NuevoDonante_Contacto : PASITOS.I_Plantilla
     {
+        public DelegadoP2 DelP2;
+
         public bool Error;
         O_Donante Obj_Don;
         AccesoDatos ObjAD = new AccesoDatos();
@@ -81,20 +83,18 @@ namespace PASITOS
                 x = ObjAD.ConsultaIDDonante();
                 this.Visible = false;
 
-                //Del(x);
-
-                new I_NuevoContacto(x);
+                NuevoContacto = new I_NuevoContacto(x,0);
+                NuevoContacto.DelP2 = DelP2;
+                DelP2(NuevoContacto);
+                
             }
           
 
         }
 
-        //Delegado2 Del;
+        
 
-        public void CargarDelegado(I_FormaPrincipal x)
-        {
-            //Del = new Delegado2(x.CambioInterfazContacto);
-        }
+        
         private void CapturarDatos()
         {
             Obj_Don = new O_Donante();
@@ -104,6 +104,23 @@ namespace PASITOS
             Obj_Don.RFC_Don = txtRFC.Text;
             Obj_Don.Info_Don = txtInfo.Text;
             Obj_Don.Estatus_Don = Int16.Parse(CB_Estatus.SelectedValue.ToString());
+        }
+
+
+        I_NuevoContacto NuevoContacto;
+        I_MenuPrincipal MenuPrincipal;
+        private void I_NuevoDonante_Contacto_Load(object sender, EventArgs e)
+        {
+           
+           
+          
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal = new I_MenuPrincipal();
+            MenuPrincipal.DelP2 = DelP2;
+            DelP2(MenuPrincipal);
         }
 
         

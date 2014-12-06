@@ -12,24 +12,36 @@ namespace PASITOS
     public partial class MenuPrincipal_P1 : UserControl,iModulo
     {
         public DelegadoP1 DelP1;
+        public DelegadoP2 DelP2;
+
         public MenuPrincipal_P1()
         {
             InitializeComponent();
         }
 
-        private void BtnDonante_Click(object sender, EventArgs e)
+        MenuDonantesP1 MenuDonantes_P1;
+        MenuBeneficiariosP1 MenuBeneficiarios_P1;
+        private void MenuPrincipal_P1_Load(object sender, EventArgs e)
         {
-            
-            
-            DelP1(new MenuDonantesP1());
-            
-            
+            MenuDonantes_P1 = new MenuDonantesP1();
+            MenuBeneficiarios_P1 = new MenuBeneficiariosP1();
         }
 
-        public void CargarDelegado()
+        private void BtnDonante_Click(object sender, EventArgs e)
         {
-            //DelP1 = new DelegadoP1();
+            MenuDonantes_P1.DelP1 = DelP1;
+            MenuDonantes_P1.DelP2 = DelP2;
+            DelP1(MenuDonantes_P1);
         }
+
+        private void BtnNinos_Click(object sender, EventArgs e)
+        {
+            MenuBeneficiarios_P1.DelP1 = DelP1;
+            MenuBeneficiarios_P1.DelP2 = DelP2;
+            DelP1(MenuBeneficiarios_P1);
+        }
+
+    
 
 
     }

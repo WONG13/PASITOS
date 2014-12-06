@@ -10,18 +10,21 @@ namespace PASITOS
 {
     public partial class I_NuevoContacto : PASITOS.I_Plantilla
     {
+        public DelegadoP2 DelP2;
+
         public bool Error;
         O_Contacto Obj_Con;
         AccesoDatos ObjAD = new AccesoDatos();
         DataTable ObjDT = new DataTable();
         int x;
-      
+        int Forma;
 
-        public I_NuevoContacto(int x)
+        public I_NuevoContacto(int x, int Forma)
         {
             InitializeComponent();
             dateTimePicker1.CustomFormat = "dd/MM/yyyy";
            this.x = x;
+           this.Forma = Forma;
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -81,6 +84,37 @@ namespace PASITOS
             Obj_Con.Cumpleaños_Con = dateTimePicker1.Text;
             Obj_Con.Hora_Atencion = txtHoraAten.Text;
             Obj_Con.Info_Con = txtInformacion.Text;
+        }
+        I_MenuPrincipal MenuPrincipal;
+        CatalogoAspirantesDcs CatalogoAspirantes;
+        CatalogoDonantesD CatalogoDonantes;
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            switch (Forma)
+            { 
+                case 0:
+                        MenuPrincipal = new I_MenuPrincipal();
+                        MenuPrincipal.DelP2 = DelP2;
+                        DelP2(MenuPrincipal);
+                    break;
+
+                    // CatalogoAspirantesD
+                case 1:
+                        CatalogoAspirantes = new CatalogoAspirantesDcs();
+                        CatalogoAspirantes.DelP2 = DelP2;
+                        DelP2(CatalogoAspirantes);
+                    break;
+                    // CatalogoDonantesD
+                case 2:
+                        CatalogoDonantes = new CatalogoDonantesD();
+                        CatalogoDonantes.DelP2 = DelP2;
+                        DelP2(CatalogoDonantes);
+                    break;
+
+
+            }
+
+         
         }
 
         

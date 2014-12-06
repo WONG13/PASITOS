@@ -45,9 +45,9 @@
             this.groupBox1.Controls.Add(this.btnAgenda);
             this.groupBox1.Controls.Add(this.BtnNinos);
             this.groupBox1.Controls.Add(this.BtnDonante);
-            this.groupBox1.Location = new System.Drawing.Point(12, 15);
+            this.groupBox1.Location = new System.Drawing.Point(10, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(164, 293);
+            this.groupBox1.Size = new System.Drawing.Size(180, 360);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -59,7 +59,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(24, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 37);
+            this.label1.Size = new System.Drawing.Size(130, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Menu";
             // 
@@ -69,7 +69,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgenda.Location = new System.Drawing.Point(24, 209);
             this.btnAgenda.Name = "btnAgenda";
-            this.btnAgenda.Size = new System.Drawing.Size(114, 48);
+            this.btnAgenda.Size = new System.Drawing.Size(130, 48);
             this.btnAgenda.TabIndex = 2;
             this.btnAgenda.Text = "Agenda";
             this.btnAgenda.UseVisualStyleBackColor = true;
@@ -80,10 +80,11 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnNinos.Location = new System.Drawing.Point(24, 155);
             this.BtnNinos.Name = "BtnNinos";
-            this.BtnNinos.Size = new System.Drawing.Size(114, 48);
+            this.BtnNinos.Size = new System.Drawing.Size(130, 48);
             this.BtnNinos.TabIndex = 1;
             this.BtnNinos.Text = "Niños";
             this.BtnNinos.UseVisualStyleBackColor = true;
+            this.BtnNinos.Click += new System.EventHandler(this.BtnNinos_Click);
             // 
             // BtnDonante
             // 
@@ -91,7 +92,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnDonante.Location = new System.Drawing.Point(24, 101);
             this.BtnDonante.Name = "BtnDonante";
-            this.BtnDonante.Size = new System.Drawing.Size(114, 48);
+            this.BtnDonante.Size = new System.Drawing.Size(130, 48);
             this.BtnDonante.TabIndex = 0;
             this.BtnDonante.Text = "Donantes";
             this.BtnDonante.UseVisualStyleBackColor = true;
@@ -104,7 +105,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Controls.Add(this.groupBox1);
             this.Name = "MenuPrincipal_P1";
-            this.Size = new System.Drawing.Size(189, 324);
+            this.Size = new System.Drawing.Size(200, 400);
+            this.Load += new System.EventHandler(this.MenuPrincipal_P1_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

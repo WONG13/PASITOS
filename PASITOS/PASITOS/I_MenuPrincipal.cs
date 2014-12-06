@@ -11,7 +11,7 @@ namespace PASITOS
 {
     public partial class I_MenuPrincipal : UserControl,iModulo
     {
-        //Delegado Del;
+        public DelegadoP2 DelP2;
         
 
         public I_MenuPrincipal()
@@ -21,16 +21,10 @@ namespace PASITOS
 
         private void I_MenuPrincipal_Load(object sender, EventArgs e)
         {
-            //TopLevel = false;
-            //FormBorderStyle = FormBorderStyle.None;
+            
 
         }
 
-        public void CargarDelegado(I_FormaPrincipal x)
-        {
-            //Del = new Delegado(x.CambioInterfazDonante);
-
-        }
         private void BtnDonaciones_Click(object sender, EventArgs e)
         {
             

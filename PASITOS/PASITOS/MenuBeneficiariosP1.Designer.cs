@@ -1,6 +1,6 @@
 ﻿namespace PASITOS
 {
-    partial class MenuDonantesP1
+    partial class MenuBeneficiariosP1
     {
         /// <summary> 
         /// Required designer variable.
@@ -50,7 +50,7 @@
             this.groupBox1.Location = new System.Drawing.Point(10, 20);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(180, 360);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // BtnMenuP
@@ -85,9 +85,8 @@
             this.BtnDonantes.Name = "BtnDonantes";
             this.BtnDonantes.Size = new System.Drawing.Size(130, 48);
             this.BtnDonantes.TabIndex = 2;
-            this.BtnDonantes.Text = "Donantes";
+            this.BtnDonantes.Text = "x";
             this.BtnDonantes.UseVisualStyleBackColor = true;
-            this.BtnDonantes.Click += new System.EventHandler(this.BtnDonantes_Click);
             // 
             // BtnAspirantes
             // 
@@ -97,9 +96,8 @@
             this.BtnAspirantes.Name = "BtnAspirantes";
             this.BtnAspirantes.Size = new System.Drawing.Size(130, 48);
             this.BtnAspirantes.TabIndex = 1;
-            this.BtnAspirantes.Text = "Aspirantes";
+            this.BtnAspirantes.Text = "Beneficiarios";
             this.BtnAspirantes.UseVisualStyleBackColor = true;
-            this.BtnAspirantes.Click += new System.EventHandler(this.BtnAspirantes_Click);
             // 
             // BtnNuevoAspirante
             // 
@@ -109,17 +107,17 @@
             this.BtnNuevoAspirante.Name = "BtnNuevoAspirante";
             this.BtnNuevoAspirante.Size = new System.Drawing.Size(130, 48);
             this.BtnNuevoAspirante.TabIndex = 0;
-            this.BtnNuevoAspirante.Text = "Nuevo\r\nAspirante";
+            this.BtnNuevoAspirante.Text = "Nuevo\r\nBeneficiario";
             this.BtnNuevoAspirante.UseVisualStyleBackColor = true;
             this.BtnNuevoAspirante.Click += new System.EventHandler(this.BtnNuevoAspirante_Click);
             // 
-            // MenuDonantesP1
+            // MenuBeneficiariosP1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Controls.Add(this.groupBox1);
-            this.Name = "MenuDonantesP1";
+            this.Name = "MenuBeneficiariosP1";
             this.Size = new System.Drawing.Size(200, 400);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -129,10 +127,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button BtnMenuP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnDonantes;
         private System.Windows.Forms.Button BtnAspirantes;
         private System.Windows.Forms.Button BtnNuevoAspirante;
-        private System.Windows.Forms.Button BtnMenuP;
     }
 }

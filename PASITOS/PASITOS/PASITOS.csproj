@@ -46,6 +46,18 @@
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
     <Compile Include="A_AConexion.cs" />
+    <Compile Include="CatalogoAspirantesDcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CatalogoAspirantesDcs.Designer.cs">
+      <DependentUpon>CatalogoAspirantesDcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogoDonantesD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CatalogoDonantesD.Designer.cs">
+      <DependentUpon>CatalogoDonantesD.cs</DependentUpon>
+    </Compile>
     <Compile Include="iModulo.cs" />
     <Compile Include="Interfaces\I_Catalogo.cs">
       <SubType>UserControl</SubType>
@@ -101,6 +113,12 @@
     <Compile Include="Interfaces\I_Plantilla.Designer.cs">
       <DependentUpon>I_Plantilla.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuBeneficiariosP1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBeneficiariosP1.Designer.cs">
+      <DependentUpon>MenuBeneficiariosP1.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuDonantesP1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,6 +138,12 @@
     <Compile Include="Objetos\O_Donativo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CatalogoAspirantesDcs.resx">
+      <DependentUpon>CatalogoAspirantesDcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogoDonantesD.resx">
+      <DependentUpon>CatalogoDonantesD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\I_Catalogo.resx">
       <DependentUpon>I_Catalogo.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\I_Plantilla.resx">
       <DependentUpon>I_Plantilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBeneficiariosP1.resx">
+      <DependentUpon>MenuBeneficiariosP1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuDonantesP1.resx">
       <DependentUpon>MenuDonantesP1.cs</DependentUpon>

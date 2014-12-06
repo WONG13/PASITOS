@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace PASITOS
 {
-    public partial class I_Plantilla : UserControl
+    public partial class I_Plantilla : UserControl,iModulo
     {
         public I_Plantilla()
         {
