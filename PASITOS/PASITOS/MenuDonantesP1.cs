@@ -1,19 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
 namespace PASITOS
 {
-    public partial class I_Prueba : Form
+    public partial class MenuDonantesP1 : UserControl,iModulo
     {
-        public I_Prueba()
+        public MenuDonantesP1()
         {
             InitializeComponent();
         }
+
+     
     }
 }

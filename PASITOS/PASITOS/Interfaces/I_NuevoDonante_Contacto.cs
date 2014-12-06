@@ -81,7 +81,7 @@ namespace PASITOS
                 x = ObjAD.ConsultaIDDonante();
                 this.Visible = false;
 
-                Del(x);
+                //Del(x);
 
                 new I_NuevoContacto(x);
             }
@@ -89,11 +89,11 @@ namespace PASITOS
 
         }
 
-        Delegado2 Del;
+        //Delegado2 Del;
 
         public void CargarDelegado(I_FormaPrincipal x)
         {
-            Del = new Delegado2(x.CambioInterfazContacto);
+            //Del = new Delegado2(x.CambioInterfazContacto);
         }
         private void CapturarDatos()
         {
@@ -106,11 +106,7 @@ namespace PASITOS
             Obj_Don.Estatus_Don = Int16.Parse(CB_Estatus.SelectedValue.ToString());
         }
 
-        private void I_NuevoDonante_Contacto_Load(object sender, EventArgs e)
-        {
-            TopLevel = false;
-            FormBorderStyle = FormBorderStyle.None;
-        }
+        
 
 
     }

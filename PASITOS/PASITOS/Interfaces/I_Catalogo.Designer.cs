@@ -83,7 +83,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(681, 417);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+           
             this.Name = "I_Catalogo";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DG_Catalog)).EndInit();

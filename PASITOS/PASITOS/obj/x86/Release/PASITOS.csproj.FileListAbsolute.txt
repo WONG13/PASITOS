@@ -1,0 +1,13 @@
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.Form1.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_Catalogo.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_FormaPrincipal.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_MenuDonaciones.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_MenuPrincipal.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoBeneficiario.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoContacto.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoDonante_Contacto.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoDonativo.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_Plantilla.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_Prueba.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.Properties.Resources.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.csproj.GenerateResource.Cache

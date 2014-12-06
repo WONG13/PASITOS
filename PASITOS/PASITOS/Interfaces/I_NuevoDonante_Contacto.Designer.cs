@@ -187,7 +187,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(691, 342);
             this.Name = "I_NuevoDonante_Contacto";
-            this.Load += new System.EventHandler(this.I_NuevoDonante_Contacto_Load);
+            
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorDatos)).EndInit();

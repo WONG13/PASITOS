@@ -9,56 +9,15 @@ using System.Windows.Forms;
 
 namespace PASITOS
 {
-    public delegate void Delegado();
-    public delegate void Delegado2(int x);
+    public delegate void DelegadoP1(UserControl UC1);
+    public delegate void DelegadoP2(UserControl UC2);
+
+    
 
     public partial class I_FormaPrincipal : Form
     {
-
-
-
-        public  void CambioInterfazDonante()
-        {
-
-
-            foreach (Form f in this.MdiChildren)
-            {
-                if (f.Name == "I_NuevoDonante_Contacto")
-                {
-                    f.Activate();
-                    return;
-                }
-            }
-
-            I_NuevoDonante_Contacto formHijo = new I_NuevoDonante_Contacto();
-            formHijo.CargarDelegado(this);
-            formHijo.MdiParent = this;
-            formHijo.WindowState = FormWindowState.Maximized;
-            formHijo.Show();
-            
-        }
-
-        public void CambioInterfazContacto(int x)
-        {
-
-
-            foreach (Form f in this.MdiChildren)
-            {
-                if (f.Name == "I_NuevoContacto")
-                {
-                    f.Activate();
-                    return;
-                }
-            }
-
-            I_NuevoContacto formHijo = new I_NuevoContacto(2);
-            
-            formHijo.MdiParent = this;
-            formHijo.WindowState = FormWindowState.Maximized;
-            formHijo.Show();
-
-        }
-
+        private iModulo ModuloActualP1 { get; set; }
+        private iModulo ModuloActualP2 { get; set; }
 
         public I_FormaPrincipal()
         {
@@ -66,29 +25,45 @@ namespace PASITOS
 
             
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        
+        private void I_FormaPrincipal_Load(object sender, EventArgs e)
         {
-
-            
-            foreach (Form f in this.MdiChildren)
-            {
-                if (f.Name == "I_MenuPrincipal")
-                {
-                    f.Activate();
-                    return;
-                }
-            }
-
-            I_MenuPrincipal formHijo = new I_MenuPrincipal();
-            formHijo.CargarDelegado(this);
-            formHijo.MdiParent = this;
-            formHijo.WindowState = FormWindowState.Maximized;
-            formHijo.Show();
+            MenuPrincipal_P1 MenuP1 = new MenuPrincipal_P1();
+            MenuP1.DelP1 = new DelegadoP1(MostrarModuloP1);
+            MostrarModuloP1(MenuP1);
+            I_MenuPrincipal MenuP2 = new I_MenuPrincipal();
+            MostrarModuloP2(MenuP2);    
+     
 
         }
 
-      
+        // Panel 1
+        
+        
+
+        public void MostrarModuloP1(UserControl NuevoModulo)
+        {
+            if (ModuloActualP1 != null)
+            {
+                ((IDisposable)ModuloActualP1).Dispose();
+            }
+            ModuloActualP1 = (iModulo)NuevoModulo;      
+            NuevoModulo.Dock = DockStyle.Fill;
+            NuevoModulo.Parent = SC1.Panel1;     
+        }
+
+        public void MostrarModuloP2(UserControl NuevoModulo)
+        {
+            if (ModuloActualP2 != null)
+            {
+                ((IDisposable)ModuloActualP2).Dispose();
+            }
+            ModuloActualP2 = (iModulo)NuevoModulo;
+            NuevoModulo.Dock = DockStyle.Fill;
+            NuevoModulo.Parent = SC1.Panel2;
+        }
+
+       
 
     }
 }

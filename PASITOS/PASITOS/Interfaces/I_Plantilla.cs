@@ -9,13 +9,16 @@ using System.Windows.Forms;
 
 namespace PASITOS
 {
-    public partial class Form1 : UserControl
+    public partial class I_Plantilla : UserControl
     {
-        public Form1()
+        public I_Plantilla()
         {
             InitializeComponent();
+         
         }
 
- 
+        
+
+        
     }
 }

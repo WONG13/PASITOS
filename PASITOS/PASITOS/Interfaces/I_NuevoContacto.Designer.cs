@@ -204,7 +204,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(567, 362);
             this.Name = "I_NuevoContacto";
-            this.Load += new System.EventHandler(this.I_NuevoContacto_Load);
+            
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorDatos)).EndInit();

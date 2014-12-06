@@ -16,3 +16,21 @@ c:\users\wong\documents\visual studio 2010\Projects\PASITOS\PASITOS\obj\x86\Debu
 c:\users\wong\documents\visual studio 2010\Projects\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_Catalogo.resources
 C:\Users\WONG\documents\visual studio 2010\Projects\PASITOS\PASITOS\obj\x86\Debug\PASITOS.csprojResolveAssemblyReference.cache
 C:\Users\WONG\documents\visual studio 2010\Projects\PASITOS\PASITOS\obj\x86\Debug\PASITOS.Form1.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.exe
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.csprojResolveAssemblyReference.cache
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_Catalogo.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_FormaPrincipal.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_MenuDonaciones.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_MenuPrincipal.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_NuevoBeneficiario.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_NuevoContacto.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_NuevoDonante_Contacto.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_NuevoDonativo.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_Plantilla.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.Properties.Resources.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.csproj.GenerateResource.Cache
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\bin\Debug\PASITOS.exe
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\bin\Debug\PASITOS.pdb
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.pdb
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.MenuPrincipal_P1.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.MenuDonantesP1.resources

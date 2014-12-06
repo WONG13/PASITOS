@@ -83,11 +83,7 @@ namespace PASITOS
             Obj_Con.Info_Con = txtInformacion.Text;
         }
 
-        private void I_NuevoContacto_Load(object sender, EventArgs e)
-        {
-            TopLevel = false;
-            FormBorderStyle = FormBorderStyle.None;
-        }
+        
 
     }
 }

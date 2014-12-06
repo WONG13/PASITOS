@@ -29,7 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(I_FormaPrincipal));
+            this.SC1 = new System.Windows.Forms.SplitContainer();
+            this.SC1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // SC1
+            // 
+            this.SC1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SC1.Location = new System.Drawing.Point(0, 0);
+            this.SC1.Name = "SC1";
+            this.SC1.Size = new System.Drawing.Size(800, 478);
+            this.SC1.SplitterDistance = 201;
+            this.SC1.TabIndex = 0;
             // 
             // I_FormaPrincipal
             // 
@@ -37,16 +49,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 478);
+            this.Controls.Add(this.SC1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
             this.Name = "I_FormaPrincipal";
             this.Text = "PASITOS";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.I_FormaPrincipal_Load);
+            this.SC1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.SplitContainer SC1;
     }
 }
 
