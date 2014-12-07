@@ -10,6 +10,8 @@ namespace PASITOS
 {
     public partial class I_NuevoBeneficiario : PASITOS.I_Plantilla
     {
+        public DelegadoP1 DelP1;
+        public DelegadoP2 DelP2;
 
         public bool Error;
         O_Beneficiario Obj_Ben;
@@ -78,6 +80,13 @@ namespace PASITOS
             Obj_Ben.Genero_Ben = Int16.Parse(CB_Genero.SelectedValue.ToString());
             Obj_Ben.Padecimiento_Ben = txtPadecimiento.Text;
             Obj_Ben.Necesidad_Ben = txtNecesidades.Text;
+        }
+        I_MenuPrincipal MenuPrincipal;
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal = new I_MenuPrincipal();
+            MenuPrincipal.DelP2 = DelP2;
+            DelP2(MenuPrincipal);
         }
 
 

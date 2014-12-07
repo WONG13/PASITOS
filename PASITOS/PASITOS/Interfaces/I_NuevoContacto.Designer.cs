@@ -50,7 +50,8 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(543, 23);
+            this.label1.Location = new System.Drawing.Point(15, 20);
+            this.label1.Size = new System.Drawing.Size(530, 25);
             this.label1.Text = "Capturar Datos de Contacto";
             // 
             // groupBox1
@@ -69,16 +70,18 @@
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Size = new System.Drawing.Size(543, 286);
+            this.groupBox1.Location = new System.Drawing.Point(15, 45);
+            this.groupBox1.Size = new System.Drawing.Size(530, 274);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(399, 327);
+            this.btnAceptar.Location = new System.Drawing.Point(392, 325);
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(480, 327);
+            this.BtnCancelar.Location = new System.Drawing.Point(473, 325);
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // txtPuesto
             // 
@@ -202,9 +205,8 @@
             // I_NuevoContacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(567, 362);
             this.Name = "I_NuevoContacto";
-            
+            this.Size = new System.Drawing.Size(560, 360);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorDatos)).EndInit();

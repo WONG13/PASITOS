@@ -61,17 +61,17 @@
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Size = new System.Drawing.Size(424, 239);
+            this.groupBox1.Size = new System.Drawing.Size(424, 252);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(280, 280);
+            this.btnAceptar.Location = new System.Drawing.Point(280, 344);
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(361, 280);
-            
+            this.BtnCancelar.Location = new System.Drawing.Point(361, 344);
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // label2
             // 
@@ -165,8 +165,8 @@
             // I_NuevoBeneficiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(448, 315);
             this.Name = "I_NuevoBeneficiario";
+            this.Size = new System.Drawing.Size(448, 379);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorDatos)).EndInit();

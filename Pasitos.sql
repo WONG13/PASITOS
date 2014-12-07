@@ -106,5 +106,7 @@ SELECT MAX(ID_Donante) FROM Donante
 inner join Donante d on d.ID_Donante=c.ID_Donante
 
 select * from Contacto
+
+select ID_Donante,Nombre_Don,ID_Tipo_Don,Direccion_Don,RFC_Don,Info_Don From Donante where ID_Estatus=2
  
  

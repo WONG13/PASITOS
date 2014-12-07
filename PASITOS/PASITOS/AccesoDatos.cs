@@ -270,5 +270,43 @@ namespace PASITOS
 
             return dTable;
         }
+
+        internal DataTable ConsultaAspirantes_a_Donantes()
+        {
+            comando = new SqlCommand();
+            dTable = new DataTable();
+
+            comando.Connection = A_AConexion.ObtenerConexion();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "  select ID_Donante,Nombre_Don,ID_Tipo_Don,Direccion_Don,RFC_Don,Info_Don From Donante where ID_Estatus=2";
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+            da.Fill(dTable);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+
+
+            return dTable;
+        }
+
+        internal DataTable ConsultaDonantes()
+        {
+            comando = new SqlCommand();
+            dTable = new DataTable();
+
+            comando.Connection = A_AConexion.ObtenerConexion();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "  select ID_Donante,Nombre_Don,ID_Tipo_Don,Direccion_Don,RFC_Don,Info_Don From Donante where ID_Estatus=1";
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+            da.Fill(dTable);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+
+
+            return dTable;
+        }
     }
 }
