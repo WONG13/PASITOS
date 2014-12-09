@@ -18,7 +18,7 @@ namespace PASITOS
         DataTable ObjDT = new DataTable();
         O_Donante Obj_Don;
         int IndexA;
-        int Id=-1;
+        int ID=-1;
 
         public CatalogoDonantesD()
         {
@@ -57,9 +57,9 @@ namespace PASITOS
 
         private void BtnNuevoContacto_Click(object sender, EventArgs e)
         {
-            if (Id > 0)
+            if (ID > 0)
             {
-                NuevoContacto = new I_NuevoContacto(Id, 2);
+                NuevoContacto = new I_NuevoContacto(ID, 2);
                 NuevoContacto.DelP2 = DelP2;
                 DelP2(NuevoContacto);
             }
@@ -69,9 +69,18 @@ namespace PASITOS
 
         private void DG_Catalog_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            IndexA = DG_Catalog.CurrentRow.Index;
-            Id = int.Parse(DG_Catalog[0, IndexA].Value.ToString());
-            catalagoContacto1.Cargar(Id);
+            //IndexA = DG_Catalog.CurrentRow.Index;
+            //Id = int.Parse(DG_Catalog[0, IndexA].Value.ToString());
+            //catalagoContacto1.Cargar(Id);
+        }
+
+        private void DG_Catalog_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                ID = ((DataTable)DG_Catalog.DataSource).Rows[e.RowIndex].Field<int>("ID_Donante");//e.RowIndex
+                catalagoContacto1.Cargar(ID);
+            }
         }
     }
 }

@@ -67,6 +67,7 @@
             this.DG_Catalog.ReadOnly = true;
             this.DG_Catalog.Size = new System.Drawing.Size(600, 158);
             this.DG_Catalog.TabIndex = 0;
+            this.DG_Catalog.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Catalog_CellClick);
             this.DG_Catalog.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Catalog_CellContentClick);
             // 
             // BtnNuevoContacto

@@ -21,10 +21,12 @@ namespace PASITOS
 
         MenuDonantesP1 MenuDonantes_P1;
         MenuBeneficiariosP1 MenuBeneficiarios_P1;
+        MenuDonativos MenuDonativos_P1;
         private void MenuPrincipal_P1_Load(object sender, EventArgs e)
         {
             MenuDonantes_P1 = new MenuDonantesP1();
             MenuBeneficiarios_P1 = new MenuBeneficiariosP1();
+            MenuDonativos_P1 = new MenuDonativos();
         }
 
         private void BtnDonante_Click(object sender, EventArgs e)
@@ -39,6 +41,14 @@ namespace PASITOS
             MenuBeneficiarios_P1.DelP1 = DelP1;
             MenuBeneficiarios_P1.DelP2 = DelP2;
             DelP1(MenuBeneficiarios_P1);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuDonativos_P1.DelP1 = DelP1;
+            MenuDonativos_P1.DelP2 = DelP2;
+            DelP1(MenuDonativos_P1);
+
         }
 
     

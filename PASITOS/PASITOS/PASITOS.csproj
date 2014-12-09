@@ -71,11 +71,11 @@
       <DependentUpon>CatalogoDonantesD.cs</DependentUpon>
     </Compile>
     <Compile Include="iModulo.cs" />
-    <Compile Include="Interfaces\I_Catalogo.cs">
+    <Compile Include="Interfaces\I_CatalogoDonativo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Interfaces\I_Catalogo.Designer.cs">
-      <DependentUpon>I_Catalogo.cs</DependentUpon>
+    <Compile Include="Interfaces\I_CatalogoDonativo.Designer.cs">
+      <DependentUpon>I_CatalogoDonativo.cs</DependentUpon>
     </Compile>
     <Compile Include="I_FormaPrincipal.cs">
       <SubType>Form</SubType>
@@ -137,6 +137,12 @@
     <Compile Include="MenuDonantesP1.Designer.cs">
       <DependentUpon>MenuDonantesP1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuDonativos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuDonativos.Designer.cs">
+      <DependentUpon>MenuDonativos.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal_P1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,8 +169,8 @@
     <EmbeddedResource Include="CatalogoDonantesD.resx">
       <DependentUpon>CatalogoDonantesD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces\I_Catalogo.resx">
-      <DependentUpon>I_Catalogo.cs</DependentUpon>
+    <EmbeddedResource Include="Interfaces\I_CatalogoDonativo.resx">
+      <DependentUpon>I_CatalogoDonativo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="I_FormaPrincipal.resx">
       <DependentUpon>I_FormaPrincipal.cs</DependentUpon>
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuDonantesP1.resx">
       <DependentUpon>MenuDonantesP1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDonativos.resx">
+      <DependentUpon>MenuDonativos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal_P1.resx">
       <DependentUpon>MenuPrincipal_P1.cs</DependentUpon>

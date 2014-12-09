@@ -60,3 +60,6 @@ C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Debu
 C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.csproj.GenerateResource.Cache
 C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.CatalogoBeneficiario.resources
 C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.CatalagoContacto.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.CatalagoContacto.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.CatalogoBeneficiario.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.MenuDonativos.resources
