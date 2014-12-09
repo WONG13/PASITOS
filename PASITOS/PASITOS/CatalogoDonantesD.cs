@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace PASITOS
 {
-    public partial class CatalogoDonantesD : PASITOS.I_Plantilla
+    public partial class CatalogoDonantesD : PASITOS.I_Plantilla, iModulo
     {
         public DelegadoP1 DelP1;
         public DelegadoP2 DelP2;
@@ -18,7 +18,7 @@ namespace PASITOS
         DataTable ObjDT = new DataTable();
         O_Donante Obj_Don;
         int IndexA;
-        int Id;
+        int Id=-1;
 
         public CatalogoDonantesD()
         {
@@ -57,15 +57,21 @@ namespace PASITOS
 
         private void BtnNuevoContacto_Click(object sender, EventArgs e)
         {
-            NuevoContacto = new I_NuevoContacto(Id, 2);
-            NuevoContacto.DelP2 = DelP2;
-            DelP2(NuevoContacto);
+            if (Id > 0)
+            {
+                NuevoContacto = new I_NuevoContacto(Id, 2);
+                NuevoContacto.DelP2 = DelP2;
+                DelP2(NuevoContacto);
+            }
+            else
+                MessageBox.Show("Seleccione un Donante primero");
         }
 
         private void DG_Catalog_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             IndexA = DG_Catalog.CurrentRow.Index;
             Id = int.Parse(DG_Catalog[0, IndexA].Value.ToString());
+            catalagoContacto1.Cargar(Id);
         }
     }
 }

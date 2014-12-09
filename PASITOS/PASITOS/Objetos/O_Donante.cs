@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PASITOS
 {
-    class O_Donante
+    public class O_Donante
     {
         public string Nom_Don { get; set; }
         public int ID_Tipo_Don { get; set; }

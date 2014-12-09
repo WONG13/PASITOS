@@ -59,10 +59,8 @@ namespace PASITOS
 
             if (Error == false)
             {
-                CapturarDatos();
-                x = ObjAD.ConsultaIDDonante();
-
-                ObjAD.NuevoContacto(Obj_Con, x);
+                CapturarDatos();                
+                ObjAD.NuevoContacto(Obj_Con);
 
                 MessageBox.Show("Contacto Agregado");
                 txtNombre.Clear();
@@ -77,6 +75,7 @@ namespace PASITOS
         private void CapturarDatos()
         {
             Obj_Con = new O_Contacto();
+            Obj_Con.ID_Donante = x;
             Obj_Con.Nombre_Con = txtNombre.Text;
             Obj_Con.Tel_Con = txtTelefono.Text;
             Obj_Con.Correo_Con = txtCorreo.Text;

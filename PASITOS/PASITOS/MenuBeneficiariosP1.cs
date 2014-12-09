@@ -43,6 +43,15 @@ namespace PASITOS
             DelP2(NuevoBeneficiario);
         }
 
+        private void BtnAspirantes_Click(object sender, EventArgs e)
+        {
+            CatalogoBeneficiario CB = new CatalogoBeneficiario();
+            CB.DelP1 = DelP1;
+            CB.DelP2 = DelP2;
+            CB.Cargar();
+            DelP2(CB);
+        }
+
        
 
     }

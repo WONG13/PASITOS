@@ -63,6 +63,7 @@ namespace PASITOS
         {
             IndexA = DG_Catalog.CurrentRow.Index;
             Id = int.Parse(DG_Catalog[0, IndexA].Value.ToString());
+            catalagoContacto1.Cargar(Id);
         }
     }
 }

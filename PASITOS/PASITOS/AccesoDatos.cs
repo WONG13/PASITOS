@@ -54,7 +54,8 @@ namespace PASITOS
             comando.ExecuteNonQuery();
             comando.Connection.Close();
         }
-        internal void NuevoContacto(O_Contacto C, int x)
+
+        internal void NuevoContacto(O_Contacto C)
         {
             comando = new SqlCommand();
             comando.Connection = A_AConexion.ObtenerConexion();
@@ -70,12 +71,13 @@ namespace PASITOS
             comando.Parameters.AddWithValue("@Cumpleaños_Con", C.Cumpleaños_Con);
             comando.Parameters.AddWithValue("@Hora_Atencion", C.Hora_Atencion);
             comando.Parameters.AddWithValue("@Info_Con", C.Info_Con);
-            comando.Parameters.AddWithValue("@ID_Donante", x);
+            comando.Parameters.AddWithValue("@ID_Donante", C.ID_Donante);
 
             comando.Connection.Open();
             comando.ExecuteNonQuery();
             comando.Connection.Close();
         }
+
         internal void NuevoDatosDonativo(O_Donativo D)
         {
             comando = new SqlCommand();
@@ -151,6 +153,7 @@ namespace PASITOS
             comando.Connection.Close();
             return dTable;
         }
+
         internal DataTable ConsultaBeneficiarioCB()
         {
             comando = new SqlCommand();
@@ -202,7 +205,6 @@ namespace PASITOS
             return dTable;
         }
 
-
         // CONSULTAS //////////////////////////////////////////////////////////
 
         internal int ConsultaIDDonante()
@@ -226,10 +228,6 @@ namespace PASITOS
 
 
         }
-
-
-
-
 
         internal DataTable ConsultaBeneficiarioMos()
         {
@@ -260,6 +258,27 @@ namespace PASITOS
             comando.CommandType = CommandType.Text;
             comando.CommandText = "  select d.Nombre_Don,c.ID_Contacto,c.Nombre_Con,c.Tel_Con,c.Correo_Con,c.Puesto_Con,c.Hora_Atencion,c.Info_Con,c.Cumpleaños_Con from Contacto c "+
                                     "inner join Donante d on d.ID_Donante=c.ID_Donante";
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+            da.Fill(dTable);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+
+
+            return dTable;
+        }
+
+        internal DataTable ConsultarContatoPorDonanteID(int ID)
+        {
+            comando = new SqlCommand();
+            dTable = new DataTable();
+
+            comando.Connection = A_AConexion.ObtenerConexion();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "  select d.Nombre_Don,c.ID_Contacto,c.Nombre_Con,c.Tel_Con,c.Correo_Con,c.Puesto_Con,c.Hora_Atencion,c.Info_Con,c.Cumpleaños_Con from Contacto c " +
+                                    "inner join Donante d on d.ID_Donante=c.ID_Donante where @ID_Donante=d.ID_Donante";
+            comando.Parameters.AddWithValue("@ID_Donante",ID);
             SqlDataAdapter da = new SqlDataAdapter(comando);
             da.Fill(dTable);
 

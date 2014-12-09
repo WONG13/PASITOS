@@ -98,6 +98,7 @@
             this.BtnAspirantes.TabIndex = 1;
             this.BtnAspirantes.Text = "Beneficiarios";
             this.BtnAspirantes.UseVisualStyleBackColor = true;
+            this.BtnAspirantes.Click += new System.EventHandler(this.BtnAspirantes_Click);
             // 
             // BtnNuevoAspirante
             // 

@@ -46,11 +46,23 @@
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
     <Compile Include="A_AConexion.cs" />
+    <Compile Include="CatalagoContacto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CatalagoContacto.Designer.cs">
+      <DependentUpon>CatalagoContacto.cs</DependentUpon>
+    </Compile>
     <Compile Include="CatalogoAspirantesDcs.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CatalogoAspirantesDcs.Designer.cs">
       <DependentUpon>CatalogoAspirantesDcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogoBeneficiario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CatalogoBeneficiario.Designer.cs">
+      <DependentUpon>CatalogoBeneficiario.cs</DependentUpon>
     </Compile>
     <Compile Include="CatalogoDonantesD.cs">
       <SubType>UserControl</SubType>
@@ -138,8 +150,15 @@
     <Compile Include="Objetos\O_Donativo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLManager.cs" />
+    <EmbeddedResource Include="CatalagoContacto.resx">
+      <DependentUpon>CatalagoContacto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CatalogoAspirantesDcs.resx">
       <DependentUpon>CatalogoAspirantesDcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogoBeneficiario.resx">
+      <DependentUpon>CatalogoBeneficiario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CatalogoDonantesD.resx">
       <DependentUpon>CatalogoDonantesD.cs</DependentUpon>

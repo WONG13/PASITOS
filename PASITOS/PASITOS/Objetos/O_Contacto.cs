@@ -5,9 +5,10 @@ using System.Text;
 
 namespace PASITOS
 {
-    class O_Contacto
+    public class O_Contacto
     {
         public int ID_Contacto { get; set; }
+        public int ID_Donante { get; set; }
         public string Nombre_Con { get; set; }
         public string Tel_Con { get; set; }
         public string Correo_Con { get; set; }

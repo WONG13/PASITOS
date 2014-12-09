@@ -28,11 +28,8 @@ namespace PASITOS
         
         private void I_FormaPrincipal_Load(object sender, EventArgs e)
         {
-            AccionesPanel2();   
-     
-            AccionesPanel1();
-           
-
+            AccionesPanel2();        
+            AccionesPanel1();           
         }
 
         private void AccionesPanel1()
@@ -49,13 +46,7 @@ namespace PASITOS
             MenuP2.DelP2 = new DelegadoP2(MostrarModuloP2);
             MostrarModuloP2(MenuP2);
         }
-
-        
-
-       
-        
-        
-
+                              
         public void MostrarModuloP1(UserControl NuevoModulo)
         {
             if (ModuloActualP1 != null)
