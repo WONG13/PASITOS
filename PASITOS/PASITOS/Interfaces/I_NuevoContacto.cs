@@ -26,6 +26,8 @@ namespace PASITOS
            this.x = x;
            this.Forma = Forma;
         }
+
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
 
@@ -72,6 +74,9 @@ namespace PASITOS
                 txtNombre.Focus();
             }
         }
+
+
+
         private void CapturarDatos()
         {
             Obj_Con = new O_Contacto();

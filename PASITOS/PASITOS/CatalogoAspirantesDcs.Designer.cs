@@ -62,10 +62,10 @@
             this.DG_Catalog.AllowUserToAddRows = false;
             this.DG_Catalog.AllowUserToDeleteRows = false;
             this.DG_Catalog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DG_Catalog.Location = new System.Drawing.Point(16, 20);
+            this.DG_Catalog.Location = new System.Drawing.Point(23, 20);
             this.DG_Catalog.Name = "DG_Catalog";
             this.DG_Catalog.ReadOnly = true;
-            this.DG_Catalog.Size = new System.Drawing.Size(600, 158);
+            this.DG_Catalog.Size = new System.Drawing.Size(632, 158);
             this.DG_Catalog.TabIndex = 0;
             this.DG_Catalog.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Catalog_CellClick);
             this.DG_Catalog.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Catalog_CellContentClick);
@@ -86,10 +86,11 @@
             this.catalagoContacto1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.catalagoContacto1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.catalagoContacto1.Location = new System.Drawing.Point(6, 184);
+            this.catalagoContacto1.Location = new System.Drawing.Point(0, 184);
             this.catalagoContacto1.Name = "catalagoContacto1";
-            this.catalagoContacto1.Size = new System.Drawing.Size(635, 222);
+            this.catalagoContacto1.Size = new System.Drawing.Size(663, 222);
             this.catalagoContacto1.TabIndex = 1;
+
             // 
             // CatalogoAspirantesDcs
             // 

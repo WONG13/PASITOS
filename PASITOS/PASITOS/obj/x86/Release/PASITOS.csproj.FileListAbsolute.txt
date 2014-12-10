@@ -42,3 +42,11 @@ C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\bin\Release\
 C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoTutor.resources
 C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.MenuDonativos.resources
 C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalagoTutor.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.csprojResolveAssemblyReference.cache
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalagoContacto.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalagoTutor.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalogoAspirantesDcs.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalogoBeneficiario.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalogoDonantesD.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoTutor.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.MenuDonativos.resources

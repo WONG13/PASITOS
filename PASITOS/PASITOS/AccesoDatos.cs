@@ -348,5 +348,46 @@ namespace PASITOS
 
             return dTable;
         }
+
+        internal DataTable ConsultaBusquedaDonante(int ID)
+        {
+            comando = new SqlCommand();
+            dTable = new DataTable();
+
+            comando.Connection = A_AConexion.ObtenerConexion();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = " select * from Donante where ID_Donante=@ID";
+
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+
+            comando.Parameters.AddWithValue("@ID", ID);
+            da.Fill(dTable);
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+            return dTable;
+        }
+
+        internal void ActualizarDonante(O_Donante D, int ID)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+            //comando.CommandType = CommandType.StoredProcedure;
+
+            comando.CommandText =
+                "Update Donante Set Nombre_Don=@Nombre_Don, ID_Tipo_Don=@ID_Tipo_Don, Direccion_Don=@Direccion_Don, RFC_Don=@RFC_Don, Info_Don=@Info_Don, ID_Estatus=@ID_Estatus  where ID_Donante=@ID";
+
+            comando.Parameters.AddWithValue("@ID", ID);
+            comando.Parameters.AddWithValue("@Nombre_Don", D.Nom_Don);
+            comando.Parameters.AddWithValue("@ID_Tipo_Don", D.ID_Tipo_Don);
+            comando.Parameters.AddWithValue("@Direccion_Don", D.Direccion_Don);
+            comando.Parameters.AddWithValue("@RFC_Don", D.RFC_Don);
+            comando.Parameters.AddWithValue("@Info_Don", D.Info_Don);
+            comando.Parameters.AddWithValue("@ID_Estatus", D.Estatus_Don);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+        }
     }
 }

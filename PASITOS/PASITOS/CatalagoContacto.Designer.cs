@@ -35,19 +35,20 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(12, 3);
-            this.label1.Size = new System.Drawing.Size(632, 23);
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Size = new System.Drawing.Size(641, 23);
             this.label1.Text = "Contactos";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 24);
-            this.groupBox1.Size = new System.Drawing.Size(616, 135);
+            this.groupBox1.Location = new System.Drawing.Point(3, 24);
+            this.groupBox1.Size = new System.Drawing.Size(641, 135);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(553, 165);
+            this.btnAceptar.Location = new System.Drawing.Point(569, 165);
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // BtnCancelar
             // 
@@ -60,10 +61,10 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 9);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 9);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(604, 118);
+            this.dataGridView1.Size = new System.Drawing.Size(615, 118);
             this.dataGridView1.TabIndex = 0;
             // 
             // CatalagoContacto
@@ -80,6 +81,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridView1;
+
     }
 }

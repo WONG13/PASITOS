@@ -9,6 +9,8 @@ using System.Windows.Forms;
 
 namespace PASITOS
 {
+    public delegate void DelegadoCon();
+
     public partial class CatalogoDonantesD : PASITOS.I_Plantilla, iModulo
     {
         public DelegadoP1 DelP1;
@@ -25,10 +27,22 @@ namespace PASITOS
             InitializeComponent();
         }
 
+
+        //public void DesmarcarGrid()
+        //{
+        //    DG_Catalog.Rows[DG_Catalog.SelectedRows[0].Index].Selected = false;
+
+        //}
+       // CatalagoContacto CatCon;
+
         private void CatalogoDonantesD_Load(object sender, EventArgs e)
         {
             DesplegarGrid();
+
+
+            
         }
+
 
         private void DesplegarGrid()
         {
@@ -78,9 +92,28 @@ namespace PASITOS
         {
             if (e.RowIndex >= 0)
             {
+
+
                 ID = ((DataTable)DG_Catalog.DataSource).Rows[e.RowIndex].Field<int>("ID_Donante");//e.RowIndex
                 catalagoContacto1.Cargar(ID);
             }
+
+
         }
+
+        I_NuevoDonante_Contacto NuevoDonante;
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            if (ID > 0)
+            {
+                NuevoDonante = new I_NuevoDonante_Contacto(ID, 2);
+                NuevoDonante.DelP2 = DelP2;
+                DelP2(NuevoDonante);
+            }
+            else
+                MessageBox.Show("Seleccione un Donante primero");
+        }
+
+     
     }
 }

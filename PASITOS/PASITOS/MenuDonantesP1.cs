@@ -36,9 +36,11 @@ namespace PASITOS
             DelP2(MenuPrincipal);
         }
 
+        int ID=-1;
+        int Forma=-1;
         private void BtnNuevoAspirante_Click(object sender, EventArgs e)
         {
-            NuevoAspirante = new I_NuevoDonante_Contacto();
+            NuevoAspirante = new I_NuevoDonante_Contacto(ID,Forma);
             NuevoAspirante.DelP2 = DelP2;
             DelP2(NuevoAspirante);
         }

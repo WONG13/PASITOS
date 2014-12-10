@@ -66,3 +66,5 @@ C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.MenuDonativo
 C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.MenuDonativos.resources
 C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_NuevoTutor.resources
 C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.CatalagoTutor.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.CatalagoTutor.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_NuevoTutor.resources

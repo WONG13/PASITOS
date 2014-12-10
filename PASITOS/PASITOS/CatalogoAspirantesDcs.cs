@@ -75,5 +75,9 @@ namespace PASITOS
                 catalagoContacto1.Cargar(ID);
             }
         }
+
+
+
+      
     }
 }
