@@ -39,3 +39,6 @@ C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Rele
 C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.pdb
 C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\bin\Release\PASITOS.exe
 C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\bin\Release\PASITOS.pdb
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoTutor.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.MenuDonativos.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalagoTutor.resources

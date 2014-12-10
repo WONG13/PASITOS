@@ -1,6 +1,6 @@
 ﻿namespace PASITOS
 {
-    partial class CatalagoContacto
+    partial class CatalagoTutor
     {
         /// <summary> 
         /// Variable del diseñador requerida.
@@ -35,43 +35,44 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(12, 3);
-            this.label1.Size = new System.Drawing.Size(632, 23);
-            this.label1.Text = "Contactos";
+            this.label1.Location = new System.Drawing.Point(12, 0);
+            this.label1.Size = new System.Drawing.Size(531, 23);
+            this.label1.Text = "Tutores";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 24);
-            this.groupBox1.Size = new System.Drawing.Size(616, 135);
+            this.groupBox1.Location = new System.Drawing.Point(12, 26);
+            this.groupBox1.Size = new System.Drawing.Size(531, 117);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(553, 165);
+            this.btnAceptar.Location = new System.Drawing.Point(387, 149);
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(677, 96);
+            this.BtnCancelar.Location = new System.Drawing.Point(468, 149);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 9);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 7);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(604, 118);
+            this.dataGridView1.Size = new System.Drawing.Size(519, 88);
             this.dataGridView1.TabIndex = 0;
             // 
-            // CatalagoContacto
+            // CatalagoTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "CatalagoContacto";
-            this.Size = new System.Drawing.Size(647, 191);
+            this.Name = "CatalagoTutor";
+            this.Size = new System.Drawing.Size(555, 184);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

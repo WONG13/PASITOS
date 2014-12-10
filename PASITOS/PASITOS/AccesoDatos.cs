@@ -102,6 +102,27 @@ namespace PASITOS
             comando.Connection.Close();
         }
 
+        internal void NuevoTutor(O_Tutor T)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+
+            comando.CommandText =
+                "Insert into Tutor(Nombre_Tut,Direccion_Tut, Telefono_Tut, Parentesco_tut, FecNac_Tut)" +
+                "Values (@Nombre_Tut,@Direccion_Tut, @Telefono_Tut, @Parentesco_tut, @FecNac_Tut)";
+
+            comando.Parameters.AddWithValue("@Nombre_Tut", T.Nombre_Tut);
+            comando.Parameters.AddWithValue("@Direccion_Tut", T.Direccion_Tut);
+            comando.Parameters.AddWithValue("@Telefono_Tut", T.Telefono_Tut);
+            comando.Parameters.AddWithValue("@Parentesco_tut", T.Parentesco_Tut);
+            comando.Parameters.AddWithValue("@FecNac_Tut", T.FecNac_Tut);
+            
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+        }
+
+
         // COMBO BOX //////////////////////////////////////////////////////////
         internal DataTable ConsultaGenero()
         {

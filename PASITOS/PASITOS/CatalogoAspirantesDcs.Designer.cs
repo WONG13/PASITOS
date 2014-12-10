@@ -83,10 +83,12 @@
             // 
             // catalagoContacto1
             // 
+            this.catalagoContacto1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.catalagoContacto1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.catalagoContacto1.Location = new System.Drawing.Point(0, 184);
+            this.catalagoContacto1.Location = new System.Drawing.Point(6, 184);
             this.catalagoContacto1.Name = "catalagoContacto1";
-            this.catalagoContacto1.Size = new System.Drawing.Size(649, 195);
+            this.catalagoContacto1.Size = new System.Drawing.Size(635, 222);
             this.catalagoContacto1.TabIndex = 1;
             // 
             // CatalogoAspirantesDcs
