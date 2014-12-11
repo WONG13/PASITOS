@@ -588,10 +588,11 @@ namespace PASITOS
             int x;
             comando.Connection = A_AConexion.ObtenerConexion();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = " SELECT T.ID_Tutor FROM Tutor T "+
-                                    "JOIN RELACIONTUTOR R ON T.ID_Tutor=R.ID_Tutor "+
-                                    "JOIN Beneficiario B ON R.ID_Benefiario=B.ID_Beneficiario "+
-                                    "WHERE B.ID_Beneficiario=@ID";
+            comando.CommandText = " SELECT b.ID_Beneficiario,b.Nombre_Ben,b.Fec_Nac_Ben,g.Genero,b.Padecimiento_Ben,b.Necesidad_Ben,* FROM Tutor T " +
+                                   " JOIN RELACIONTUTOR R ON T.ID_Tutor=R.ID_Tutor " +
+                                   " JOIN Beneficiario B ON R.ID_Benefiario=B.ID_Beneficiario " +
+                                   " join genero g on g.ID_Genero=b.ID_Genero_Ben " +
+                                   " WHERE B.ID_Beneficiario=@ID ";
 
             SqlDataAdapter da = new SqlDataAdapter(comando);
 
@@ -618,6 +619,29 @@ namespace PASITOS
             comando.Connection.Open();
             comando.ExecuteNonQuery();
             comando.Connection.Close();
+        }
+
+        internal DataTable ConsultaBusquedaBeneficiario_tutor(int ID)
+        {
+            comando = new SqlCommand();
+            dTable = new DataTable();
+           
+            comando.Connection = A_AConexion.ObtenerConexion();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = " SELECT b.ID_Beneficiario,b.Nombre_Ben,b.Fec_Nac_Ben,g.Genero,b.Padecimiento_Ben,b.Necesidad_Ben,* FROM Tutor T " +
+                                   " JOIN RELACIONTUTOR R ON T.ID_Tutor=R.ID_Tutor " +
+                                   " JOIN Beneficiario B ON R.ID_Benefiario=B.ID_Beneficiario " +
+                                   " join genero g on g.ID_Genero=b.ID_Genero_Ben " +
+                                   " WHERE B.ID_Beneficiario=@ID ";
+
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+
+            comando.Parameters.AddWithValue("@ID", ID);
+            da.Fill(dTable);
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+            return dTable;
         }
     }
 }

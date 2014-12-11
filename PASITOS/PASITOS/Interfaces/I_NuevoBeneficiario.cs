@@ -16,6 +16,7 @@ namespace PASITOS
         public bool Error;
         O_Beneficiario Obj_Ben;
         O_Tutor Obj_Tut;
+
         AccesoDatos ObjAD = new AccesoDatos();
         DataTable ObjDT = new DataTable();
         DataTable Cargar;
@@ -28,13 +29,26 @@ namespace PASITOS
             InitializeComponent();
             CB_GeneroCargar();
             dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+       
+    
+
 
             this.Forma = Forma;
             if (Accion == 1)
             {
                 this.ID = ID;
+                CargarDatos(ID);
             }
 
+        }
+
+        private void CargarDatos(int ID)
+        {
+
+            ObjDT = ObjAD.ConsultaBusquedaBeneficiario_tutor(ID);
+
+
+            
         }
 
         private void CB_GeneroCargar()
