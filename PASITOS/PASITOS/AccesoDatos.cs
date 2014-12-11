@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace PASITOS
 {
@@ -619,5 +620,136 @@ namespace PASITOS
             comando.ExecuteNonQuery();
             comando.Connection.Close();
         }
+
+        ////////////////EVENTOS///////////////////////////
+        internal bool NuevoEvento(O_Evento E)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+
+            comando.CommandText =
+                "Insert into Eventos(Nombre_Evento,Tipo_Evento, Info_Evento, Fecha_Evento, Direccion, Estado_Evento)" +
+                "Values (@Nombre_Evento,@Tipo_Evento, @Info_Evento, @Fecha_Evento, @Direccion, @Estado_Evento)";
+
+            comando.Parameters.AddWithValue("@Nombre_Evento", E.Nombre_Evento);
+            comando.Parameters.AddWithValue("@Tipo_Evento", E.Tipo_Evento);
+            comando.Parameters.AddWithValue("@Info_Evento", E.Info_Evento);
+            comando.Parameters.AddWithValue("@Fecha_Evento", E.Fecha_Evento);
+            comando.Parameters.AddWithValue("@Direccion", E.Direccion);
+            comando.Parameters.AddWithValue("@Estado_Evento", E.Estado_Evento);
+            try
+            {
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al guardar Evento >>" + e.Message);
+                return false;
+            }
+            return true;
+        }
+
+        internal bool UpdateEvento(O_Evento E)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+
+            comando.CommandText = @"Update Eventos Set Nombre_Evento=@Nombre_Evento, 
+                                    Tipo_Evento=@Tipo_Evento, Info_Evento=@Info_Evento, 
+                                    Fecha_Evento=@Fecha_Evento, Direccion=@Direccion, 
+                                    Estado_Evento=@Estado_Evento WHERE ID_Evento=@ID_Evento";
+
+
+            comando.Parameters.AddWithValue("@Nombre_Evento", E.Nombre_Evento);
+            comando.Parameters.AddWithValue("@Tipo_Evento", E.Tipo_Evento);
+            comando.Parameters.AddWithValue("@Info_Evento", E.Info_Evento);
+            comando.Parameters.AddWithValue("@Fecha_Evento", E.Fecha_Evento);
+            comando.Parameters.AddWithValue("@Direccion", E.Direccion);
+            comando.Parameters.AddWithValue("@Estado_Evento", E.Estado_Evento);
+            comando.Parameters.AddWithValue("@ID_Evento", E.ID_Evento);
+            try
+            {
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al guardar Evento >>" + e.Message);
+                return false;
+            }
+            return true;
+        }
+
+        internal bool DeleteEvento(int ID_Evento)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+
+            comando.CommandText = @"DELETE FROM Eventos WHERE ID_Evento=@ID_Evento";
+
+            comando.Parameters.AddWithValue("@ID_Evento", ID_Evento);
+            try
+            {
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al Eliminar Evento >>" + e.Message);
+                return false;
+            }
+            return true;
+        }
+
+        internal DataTable ConsultarEventos(DateTime d1, DateTime d2)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+            //comando.CommandType = CommandType.StoredProcedure;
+
+            comando.CommandText = @"SELECT * FROM Eventos E WHERE E.Fecha_Evento BETWEEN @F1";
+
+            comando.Parameters.AddWithValue("@F1", d1);
+            if (d2 != null)
+            {
+                comando.CommandText += " AND @F2";
+                comando.Parameters.AddWithValue("@F2", d2);
+            }
+            DataTable tabla = new DataTable();
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+            adaptador.Fill(tabla);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+
+            return tabla;
+        }
+
+        internal DataTable ConsultarEvento(int ID)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+            //comando.CommandType = CommandType.StoredProcedure;
+
+            comando.CommandText = @"SELECT * FROM Eventos E WHERE E.ID_Evento = @ID_Evento";
+
+            comando.Parameters.AddWithValue("@ID_Evento", ID);
+
+            DataTable tabla = new DataTable();
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+            adaptador.Fill(tabla);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+
+            return tabla;
+        }
+
     }
 }

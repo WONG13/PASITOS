@@ -51,6 +51,12 @@ namespace PASITOS
 
         }
 
+        private void btnAgenda_Click(object sender, EventArgs e)
+        {
+            I_Agenda AG = new I_Agenda();
+            DelP2(AG);
+        }
+
     
 
 
