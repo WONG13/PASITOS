@@ -37,6 +37,7 @@ namespace PASITOS
             if (Accion == 1)
             {
                 this.ID = ID;
+                this.Accion = Accion;
                 CargarDatos(ID);
             }
 
@@ -46,8 +47,16 @@ namespace PASITOS
         {
 
             ObjDT = ObjAD.ConsultaBusquedaBeneficiario_tutor(ID);
-
-
+            txtNombre.Text = ObjDT.Rows[0][1].ToString();
+                dateTimePicker1.Text = ObjDT.Rows[0][2].ToString();
+            CB_Genero.Text =ObjDT.Rows[0][3].ToString();
+            txtPadecimiento.Text = ObjDT.Rows[0][4].ToString();
+            txtNecesidades.Text = ObjDT.Rows[0][5].ToString();
+            i_NuevoTutor1.txtNombretut.Text = ObjDT.Rows[0][7].ToString();
+            i_NuevoTutor1.txtDirecciontut.Text = ObjDT.Rows[0][8].ToString();
+            i_NuevoTutor1.txtTelefonotut.Text = ObjDT.Rows[0][9].ToString();
+            i_NuevoTutor1.CB_Parentesco.Text = ObjDT.Rows[0][10].ToString() ;
+            i_NuevoTutor1.dtpFecha.Text = ObjDT.Rows[0][11].ToString(); 
             
         }
 
@@ -132,8 +141,17 @@ namespace PASITOS
 
                 }
                 else
-                { 
-                    
+                {
+
+                    ObjAD.ActualizarBeneficiario(Obj_Ben,ID);
+                   int TutID = ObjAD.ConsultaRelacionTutorBeneficiario(ID);
+                    ObjAD.ActualizarTutor(Obj_Tut, TutID);
+                    MessageBox.Show("Datos Actualizados");
+
+                    MenuPrincipal = new I_MenuPrincipal();
+                    MenuPrincipal.DelP2 = DelP2;
+                    RegresoForma();
+
                 }
             }
            
@@ -160,16 +178,34 @@ namespace PASITOS
 
 
         }
-
+        CatalogoBeneficiario CataBene;
         I_MenuPrincipal MenuPrincipal;
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            MenuPrincipal = new I_MenuPrincipal();
-            MenuPrincipal.DelP2 = DelP2;
-            DelP2(MenuPrincipal);
+            RegresoForma();
         }
 
+        private void RegresoForma()
+        {
+            switch (Forma)
+            {
+                case 0:
+                    MenuPrincipal = new I_MenuPrincipal();
+                    MenuPrincipal.DelP2 = DelP2;
+                    DelP2(MenuPrincipal);
+                    break;
 
+                // CatalogoBeneficiario
+                case 1:
+                    CataBene = new CatalogoBeneficiario();
+                    CataBene.DelP2 = DelP2;
+                    DelP2(CataBene);
+                    break;
+               
+
+
+            }
+        }
         
     }
 }

@@ -129,3 +129,7 @@ JOIN RELACIONTUTOR R ON T.ID_Tutor=R.ID_Tutor
 JOIN Beneficiario B ON R.ID_Benefiario=B.ID_Beneficiario
 join genero g on g.ID_Genero=b.ID_Genero_Ben
 WHERE B.ID_Beneficiario=9
+
+
+select ID_Tutor from RelacionTutor where ID_Benefiario=7
+select ID_Tutor from RelacionTutor where ID_Benefiario=8

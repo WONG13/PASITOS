@@ -25,10 +25,11 @@ namespace PASITOS
         {
             InitializeComponent();
             CB_CargarDatos();
+            this.Forma = Forma;
             if (ID != -1 && Forma != -1)
             {
                 this.ID = ID;
-                this.Forma = Forma;
+                
                 CargarDatos(ID);
 
             }

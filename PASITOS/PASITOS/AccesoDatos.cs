@@ -643,5 +643,69 @@ namespace PASITOS
             comando.Connection.Close();
             return dTable;
         }
+
+        internal void ActualizarBeneficiario(O_Beneficiario B, int ID)
+        {
+          
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+            //comando.CommandType = CommandType.StoredProcedure;
+
+            comando.CommandText =
+                "Update Beneficiario Set Nombre_Ben=@Nombre_Ben, Fec_Nac_Ben=@Fec_Nac_Ben, ID_Genero_Ben=@ID_Genero_Ben, Padecimiento_Ben=@Padecimiento_Ben, Necesidad_Ben=@Necesidad_Ben where ID_Beneficiario=@ID";
+            
+            comando.Parameters.AddWithValue("@ID", ID);
+            comando.Parameters.AddWithValue("@Nombre_Ben", B.Nombre_Ben);
+            comando.Parameters.AddWithValue("@Fec_Nac_Ben", B.Fec_Nac_Ben);
+            comando.Parameters.AddWithValue("@ID_Genero_Ben", B.Genero_Ben);
+            comando.Parameters.AddWithValue("@Padecimiento_Ben", B.Padecimiento_Ben);
+            comando.Parameters.AddWithValue("@Necesidad_Ben", B.Necesidad_Ben);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+        
+        }
+
+        internal int ConsultaRelacionTutorBeneficiario(int ID)
+        {
+            comando = new SqlCommand();
+            dTable = new DataTable();
+
+            comando.Connection = A_AConexion.ObtenerConexion();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = " select ID_Tutor from RelacionTutor where ID_Benefiario=@ID_Benefiario ";
+
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+
+            comando.Parameters.AddWithValue("@ID_Benefiario", ID);
+            da.Fill(dTable);
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+            return int.Parse(dTable.Rows[0][0].ToString());
+          
+        }
+
+        internal void ActualizarTutor(O_Tutor T, int ID)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+            //comando.CommandType = CommandType.StoredProcedure;
+
+            comando.CommandText =
+                "Update Tutor Set Nombre_Tut=@Nombre_Tut, Direccion_Tut=@Direccion_Tut, Telefono_Tut=@Telefono_Tut, Parentesco_tut=@Parentesco_tut, FecNac_Tut=@FecNac_Tut where ID_Tutor=@ID";
+
+            comando.Parameters.AddWithValue("@ID", ID);
+            comando.Parameters.AddWithValue("@Nombre_Tut", T.Nombre_Tut);
+            comando.Parameters.AddWithValue("@Direccion_Tut", T.Direccion_Tut);
+            comando.Parameters.AddWithValue("@Telefono_Tut", T.Telefono_Tut);
+            comando.Parameters.AddWithValue("@Parentesco_tut", T.Parentesco_Tut);
+            comando.Parameters.AddWithValue("@FecNac_Tut", T.FecNac_Tut);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+        }
     }
 }

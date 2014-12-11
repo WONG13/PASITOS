@@ -54,7 +54,7 @@ namespace PASITOS
         {
             if (ID > 0)
             {
-                NuevoBeneficiario = new I_NuevoBeneficiario(ID, 2, 1);
+                NuevoBeneficiario = new I_NuevoBeneficiario(ID, 1, 1);
                 NuevoBeneficiario.DelP2 = DelP2;
                 DelP2(NuevoBeneficiario);
             }
@@ -85,14 +85,7 @@ namespace PASITOS
         I_NuevoTutor NuevoTutor;
         private void BtnNuevoContacto_Click(object sender, EventArgs e)
         {
-            if (ID > 0)
-            {
-                NuevoTutor = new I_NuevoTutor(ID, 2, 0);
-                NuevoTutor.DelP2 = DelP2;
-                DelP2(NuevoTutor);
-            }
-            else
-                MessageBox.Show("Seleccione un Donante primero");
+
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -102,7 +95,7 @@ namespace PASITOS
 
         private void CatalogoBeneficiario_Load(object sender, EventArgs e)
         {
-
+            Cargar();
         }
 
 

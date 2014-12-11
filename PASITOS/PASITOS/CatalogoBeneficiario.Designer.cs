@@ -56,6 +56,7 @@
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(613, 479);
+            this.btnAceptar.Visible = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // BtnCancelar
