@@ -142,6 +142,7 @@
             this.Controls.Add(this.button2);
             this.Name = "CatalogoBeneficiario";
             this.Size = new System.Drawing.Size(682, 551);
+            this.Load += new System.EventHandler(this.CatalogoBeneficiario_Load);
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);

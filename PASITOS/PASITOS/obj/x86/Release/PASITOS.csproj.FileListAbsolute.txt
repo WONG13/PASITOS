@@ -50,3 +50,5 @@ C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalogoBe
 C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalogoDonantesD.resources
 C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoTutor.resources
 C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.MenuDonativos.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoEvento.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_Agenda.resources

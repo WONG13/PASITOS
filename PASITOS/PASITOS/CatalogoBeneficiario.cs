@@ -100,6 +100,11 @@ namespace PASITOS
 
         }
 
+        private void CatalogoBeneficiario_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

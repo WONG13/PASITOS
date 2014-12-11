@@ -96,3 +96,5 @@ C:\Users\lanix\Documents\GitHub\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.ex
 C:\Users\lanix\Documents\GitHub\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.pdb
 C:\Users\lanix\Documents\GitHub\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_NuevoEvento.resources
 C:\Users\lanix\Documents\GitHub\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_Agenda.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_NuevoEvento.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Debug\PASITOS.I_Agenda.resources
