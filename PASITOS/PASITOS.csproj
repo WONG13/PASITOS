@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A68DBC0B-DD3A-4158-A8BD-675FF2B01481}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PASITOS</RootNamespace>
+    <AssemblyName>PASITOS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoDatos.cs" />
+    <Compile Include="A_AConexion.cs" />
+    <Compile Include="CatalagoContacto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CatalagoContacto.Designer.cs">
+      <DependentUpon>CatalagoContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalagoTutor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CatalagoTutor.Designer.cs">
+      <DependentUpon>CatalagoTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogoAspirantesDcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CatalogoAspirantesDcs.Designer.cs">
+      <DependentUpon>CatalogoAspirantesDcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogoBeneficiario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CatalogoBeneficiario.Designer.cs">
+      <DependentUpon>CatalogoBeneficiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogoDonantesD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CatalogoDonantesD.Designer.cs">
+      <DependentUpon>CatalogoDonantesD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iModulo.cs" />
+    <Compile Include="Interfaces\I_CatalogoDonativo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_CatalogoDonativo.Designer.cs">
+      <DependentUpon>I_CatalogoDonativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoEvento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoEvento.designer.cs">
+      <DependentUpon>I_NuevoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoTutor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoTutor.Designer.cs">
+      <DependentUpon>I_NuevoTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="I_Agenda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="I_Agenda.designer.cs">
+      <DependentUpon>I_Agenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="I_FormaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="I_FormaPrincipal.Designer.cs">
+      <DependentUpon>I_FormaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\I_MenuDonaciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_MenuDonaciones.Designer.cs">
+      <DependentUpon>I_MenuDonaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="I_MenuPrincipal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="I_MenuPrincipal.Designer.cs">
+      <DependentUpon>I_MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoBeneficiario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoBeneficiario.Designer.cs">
+      <DependentUpon>I_NuevoBeneficiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoContacto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoContacto.Designer.cs">
+      <DependentUpon>I_NuevoContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoDonante_Contacto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoDonante_Contacto.Designer.cs">
+      <DependentUpon>I_NuevoDonante_Contacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoDonativo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoDonativo.Designer.cs">
+      <DependentUpon>I_NuevoDonativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\I_Plantilla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_Plantilla.Designer.cs">
+      <DependentUpon>I_Plantilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBeneficiariosP1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBeneficiariosP1.Designer.cs">
+      <DependentUpon>MenuBeneficiariosP1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDonantesP1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuDonantesP1.Designer.cs">
+      <DependentUpon>MenuDonantesP1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDonativos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuDonativos.Designer.cs">
+      <DependentUpon>MenuDonativos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal_P1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal_P1.Designer.cs">
+      <DependentUpon>MenuPrincipal_P1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objetos\Evento.cs" />
+    <Compile Include="Objetos\O_Contacto.cs" />
+    <Compile Include="Objetos\O_RegistroDonativo.cs" />
+    <Compile Include="Objetos\O_Beneficiario.cs" />
+    <Compile Include="Objetos\O_Donante.cs" />
+    <Compile Include="Objetos\O_Donativo.cs" />
+    <Compile Include="Objetos\O_Tutor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLManager.cs" />
+    <EmbeddedResource Include="CatalagoContacto.resx">
+      <DependentUpon>CatalagoContacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalagoTutor.resx">
+      <DependentUpon>CatalagoTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogoAspirantesDcs.resx">
+      <DependentUpon>CatalogoAspirantesDcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogoBeneficiario.resx">
+      <DependentUpon>CatalogoBeneficiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogoDonantesD.resx">
+      <DependentUpon>CatalogoDonantesD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_CatalogoDonativo.resx">
+      <DependentUpon>I_CatalogoDonativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_NuevoEvento.resx">
+      <DependentUpon>I_NuevoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_NuevoTutor.resx">
+      <DependentUpon>I_NuevoTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I_Agenda.resx">
+      <DependentUpon>I_Agenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I_FormaPrincipal.resx">
+      <DependentUpon>I_FormaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_MenuDonaciones.resx">
+      <DependentUpon>I_MenuDonaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I_MenuPrincipal.resx">
+      <DependentUpon>I_MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_NuevoBeneficiario.resx">
+      <DependentUpon>I_NuevoBeneficiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_NuevoContacto.resx">
+      <DependentUpon>I_NuevoContacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_NuevoDonante_Contacto.resx">
+      <DependentUpon>I_NuevoDonante_Contacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_NuevoDonativo.resx">
+      <DependentUpon>I_NuevoDonativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_Plantilla.resx">
+      <DependentUpon>I_Plantilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBeneficiariosP1.resx">
+      <DependentUpon>MenuBeneficiariosP1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDonantesP1.resx">
+      <DependentUpon>MenuDonantesP1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDonativos.resx">
+      <DependentUpon>MenuDonativos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal_P1.resx">
+      <DependentUpon>MenuPrincipal_P1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

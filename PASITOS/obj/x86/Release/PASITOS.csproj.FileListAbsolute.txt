@@ -1,0 +1,54 @@
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_Catalogo.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_FormaPrincipal.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_MenuDonaciones.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_MenuPrincipal.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoBeneficiario.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoContacto.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoDonante_Contacto.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoDonativo.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_Plantilla.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.Properties.Resources.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.csproj.GenerateResource.Cache
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\bin\Release\PASITOS.exe
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\bin\Release\PASITOS.pdb
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.MenuBeneficiariosP1.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.MenuDonantesP1.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.MenuPrincipal_P1.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.exe
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.pdb
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.csprojResolveAssemblyReference.cache
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalagoContacto.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalogoAspirantesDcs.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalogoBeneficiario.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalogoDonantesD.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_Catalogo.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_FormaPrincipal.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_MenuDonaciones.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_MenuPrincipal.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoBeneficiario.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoContacto.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoDonante_Contacto.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoDonativo.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_Plantilla.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.MenuBeneficiariosP1.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.MenuDonantesP1.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.MenuPrincipal_P1.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.Properties.Resources.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.csproj.GenerateResource.Cache
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.exe
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.pdb
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\bin\Release\PASITOS.exe
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\bin\Release\PASITOS.pdb
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoTutor.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.MenuDonativos.resources
+C:\Users\lanix\Documents\GitHub\Proyecto BD\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalagoTutor.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.csprojResolveAssemblyReference.cache
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalagoContacto.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalagoTutor.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalogoAspirantesDcs.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalogoBeneficiario.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.CatalogoDonantesD.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoTutor.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.MenuDonativos.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_NuevoEvento.resources
+C:\Users\WONG\Desktop\PASITOS\PASITOS\PASITOS\obj\x86\Release\PASITOS.I_Agenda.resources
