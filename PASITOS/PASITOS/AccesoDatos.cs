@@ -101,16 +101,17 @@ namespace PASITOS
             comando.ExecuteNonQuery();
             comando.Connection.Close();
         }
-
+// //////
         internal void NuevoTutor(O_Tutor T)
         {
             comando = new SqlCommand();
             comando.Connection = A_AConexion.ObtenerConexion();
 
             comando.CommandText =
-                "Insert into Tutor(Nombre_Tut,Direccion_Tut, Telefono_Tut, Parentesco_tut, FecNac_Tut)" +
-                "Values (@Nombre_Tut,@Direccion_Tut, @Telefono_Tut, @Parentesco_tut, @FecNac_Tut)";
+                "Insert into Tutor(Nombre_Tut,Direccion_Tut, Telefono_Tut, Parentesco_tut, FecNac_Tut) " +
+                "Values (@Nombre_Tut,@Direccion_Tut, @Telefono_Tut, @Parentesco_tut, @FecNac_Tut) ";
 
+            // comando.Parameters.AddWithValue("@ID", ID);
             comando.Parameters.AddWithValue("@Nombre_Tut", T.Nombre_Tut);
             comando.Parameters.AddWithValue("@Direccion_Tut", T.Direccion_Tut);
             comando.Parameters.AddWithValue("@Telefono_Tut", T.Telefono_Tut);
@@ -246,8 +247,6 @@ namespace PASITOS
             comando.Connection.Close();
 
             return x=Int16.Parse(dTable.Rows[0][0].ToString());
-
-
         }
 
         internal DataTable ConsultaBeneficiarioMos()
@@ -478,9 +477,147 @@ namespace PASITOS
             comando.Connection.Close();
         }
 
-        internal object ConsultaIDBeneficiario()
+        internal int  ConsultaIDBeneficiario()
         {
-            throw new NotImplementedException();
+            comando = new SqlCommand();
+            dTable = new DataTable();
+            int x;
+            comando.Connection = A_AConexion.ObtenerConexion();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT MAX(ID_Beneficiario) FROM Beneficiario";
+
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+
+            da.Fill(dTable);
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+          
+            return x = Int16.Parse(dTable.Rows[0][0].ToString());
+        }
+
+        internal DataTable ConsultarTutorporIDBeneficiario(int ID)
+        {
+            comando = new SqlCommand();
+            dTable = new DataTable();
+
+            comando.Connection = A_AConexion.ObtenerConexion();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = " SELECT T.ID_Tutor,T.Nombre_Tut,T.Direccion_Tut,T.Telefono_Tut,T.Parentesco_Tut,T.FecNac_Tut FROM Tutor T "+
+                                    "JOIN RELACIONTUTOR R ON T.ID_Tutor=R.ID_Tutor "+
+                                    "JOIN Beneficiario B ON R.ID_Benefiario=B.ID_Beneficiario "+
+                                    "WHERE B.ID_Beneficiario=@ID";
+
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+
+            comando.Parameters.AddWithValue("@ID", ID);
+            da.Fill(dTable);
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+            return dTable;
+        }
+
+
+
+
+
+        
+
+        internal int ConsultaIDTutor()
+        {
+            comando = new SqlCommand();
+            dTable = new DataTable();
+            int x;
+            comando.Connection = A_AConexion.ObtenerConexion();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT MAX(ID_Tutor) FROM Tutor";
+
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+
+            da.Fill(dTable);
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+
+            return x = Int16.Parse(dTable.Rows[0][0].ToString());
+        }
+
+        internal void RelacionTutor(int Id_ben, int Id_Tut)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+
+            comando.CommandText =
+                "Insert into RelacionTutor(ID_Benefiario,ID_Tutor) " +
+                "Values (@ID_Benefiario,@ID_Tutor)";
+
+
+            comando.Parameters.AddWithValue("@ID_Benefiario", Id_ben);
+            comando.Parameters.AddWithValue("@ID_Tutor", Id_Tut);
+
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+        }
+
+        internal void Eliminarbeneficiario(int ID_Ben,int ID_tut)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+            //comando.CommandType = CommandType.StoredProcedure;
+            comando.CommandText = "Delete from relaciontutor where ID_Benefiario=@ID_Ben " +
+                                  "Delete from Tutor where ID_Tutor=@ID_Tut "+
+                "Delete From Beneficiario Where ID_Beneficiario = @ID_Ben ";
+
+            comando.Parameters.AddWithValue("@ID_Ben", ID_Ben);
+            comando.Parameters.AddWithValue("@ID_Tut", ID_tut);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+
+        }
+
+        internal int ConsultaIDTutor2(int ID)
+        {
+          
+            comando = new SqlCommand();
+            dTable = new DataTable();
+            int x;
+            comando.Connection = A_AConexion.ObtenerConexion();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = " SELECT T.ID_Tutor FROM Tutor T "+
+                                    "JOIN RELACIONTUTOR R ON T.ID_Tutor=R.ID_Tutor "+
+                                    "JOIN Beneficiario B ON R.ID_Benefiario=B.ID_Beneficiario "+
+                                    "WHERE B.ID_Beneficiario=@ID";
+
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+
+            comando.Parameters.AddWithValue("@ID", ID);
+            da.Fill(dTable);
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+            return x = Int16.Parse(dTable.Rows[0][0].ToString());
+        
+        }
+
+        internal void Eliminarbeneficiario2(int ID)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+            //comando.CommandType = CommandType.StoredProcedure;
+            comando.CommandText =
+                "Delete From Beneficiario Where ID_Beneficiario = @ID_Ben";
+
+            comando.Parameters.AddWithValue("@ID_Ben", ID);
+
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace PASITOS
     {
         public DelegadoP1 DelP1;
         public DelegadoP2 DelP2;
-
+        int ID = -1;
         public MenuBeneficiariosP1()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace PASITOS
         I_NuevoBeneficiario NuevoBeneficiario;
         private void BtnNuevoAspirante_Click(object sender, EventArgs e)
         {
-            NuevoBeneficiario = new I_NuevoBeneficiario();
+            NuevoBeneficiario = new I_NuevoBeneficiario(ID,0,0);
             NuevoBeneficiario.DelP1 = DelP1;
             NuevoBeneficiario.DelP2 = DelP2;
             DelP2(NuevoBeneficiario);

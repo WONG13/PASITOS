@@ -107,6 +107,18 @@ inner join Donante d on d.ID_Donante=c.ID_Donante
 
 select * from Contacto
 
-select ID_Donante,Nombre_Don,ID_Tipo_Don,Direccion_Don,RFC_Don,Info_Don From Donante where ID_Estatus=2
+select d.ID_Donante,d.Nombre_Don,t.TipoDon,d.Direccion_Don,d.RFC_Don,d.Info_Don From Donante d join TipoDonante t on t.ID_Tipo_Don=d.ID_Tipo_Don where ID_Estatus=2
  
+ select * from Donante 
  
+ select * from Tutor
+ select * from Beneficiario
+  select * from Relaciontutor
+
+CREATE TABLE RelacionTutor
+(
+ID_Relacion int not null identity(1,1),
+ID_Benefiario int,
+ID_Tutor int,
+PRIMARY KEY (ID_Relacion)
+)

@@ -40,7 +40,7 @@
             this.CB_Genero = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.ErrorDatos = new System.Windows.Forms.ErrorProvider(this.components);
-            this.i_NuevoTutor1 = new PASITOS.I_NuevoTutor();
+            this.i_NuevoTutor1 = new PASITOS.I_NuevoTutor(-1, 0, 0);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorDatos)).BeginInit();
             this.SuspendLayout();

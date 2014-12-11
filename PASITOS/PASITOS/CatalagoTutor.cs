@@ -25,7 +25,7 @@ namespace PASITOS
 
         public void Cargar(int ID)
         {
-            dataGridView1.DataSource = ObjAD.ConsultarContatoPorDonanteID(ID);
+            dataGridView1.DataSource = ObjAD.ConsultarTutorporIDBeneficiario(ID);
         }
 
     }

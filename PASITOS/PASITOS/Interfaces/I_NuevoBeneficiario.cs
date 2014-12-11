@@ -89,18 +89,38 @@ namespace PASITOS
             if (Error==false)
             {
                 CapturarDatos();
-                ObjAD.NuevoBeneficiario(Obj_Ben);
-                
 
-                MessageBox.Show("Beneficiario Agregado");
-                txtNombre.Clear();
-                CB_Genero.SelectedIndex = 0;
-                txtPadecimiento.Clear();
-                txtNecesidades.Clear();
-                txtNombre.Focus();
+                if (Accion == 0)
+                {
+                    ObjAD.NuevoBeneficiario(Obj_Ben);
+                    ObjAD.NuevoTutor(Obj_Tut);
 
-                Obj_Tut.ID= ObjAD.ConsultaIDBeneficiario();
-                ObjAD.NuevoTutor(Obj_Tut);
+                    MessageBox.Show("Beneficiario Agregado");
+                    txtNombre.Clear();
+                    CB_Genero.SelectedIndex = 0;
+                    txtPadecimiento.Clear();
+                    txtNecesidades.Clear();
+                    txtNombre.Focus();
+                    i_NuevoTutor1.txtNombretut.Clear();
+                    i_NuevoTutor1.txtDirecciontut.Clear();
+                    i_NuevoTutor1.txtTelefonotut.Clear();
+                    i_NuevoTutor1.CB_Parentesco.SelectedIndex = -1;
+
+
+
+
+                    int Id_ben= ObjAD.ConsultaIDBeneficiario();
+                    
+                    int Id_Tut = ObjAD.ConsultaIDTutor();
+                    ObjAD.RelacionTutor(Id_ben, Id_Tut);
+
+
+
+                }
+                else
+                { 
+                    
+                }
             }
            
 

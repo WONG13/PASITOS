@@ -44,7 +44,7 @@ namespace PASITOS
         {
             if (e.RowIndex >= 0)
             {
-                ID = ((DataTable)dataGridView1.DataSource).Rows[e.RowIndex].Field<int>("ID_Donante");//e.RowIndex
+                ID = ((DataTable)dataGridView1.DataSource).Rows[e.RowIndex].Field<int>("ID_Beneficiario");//e.RowIndex
                 catalagoTutor1.Cargar(ID);
             }
 
@@ -64,9 +64,22 @@ namespace PASITOS
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            ObjAD.EliminarDonante(ID);
-            MessageBox.Show("Beneficiario Eliminado");
-            Cargar();
+            try
+            {
+                int ID_Tut = ObjAD.ConsultaIDTutor2(ID);
+                ObjAD.Eliminarbeneficiario(ID, ID_Tut);
+                MessageBox.Show("Beneficiario Eliminado");
+                Cargar();
+                catalagoTutor1.dataGridView1.DataSource = null;
+            }
+            catch
+            {
+                ObjAD.Eliminarbeneficiario2(ID);
+                MessageBox.Show("Beneficiario Eliminado");
+                Cargar();
+                catalagoTutor1.dataGridView1.DataSource = null;
+            }
+
         }
 
         I_NuevoTutor NuevoTutor;
@@ -80,6 +93,11 @@ namespace PASITOS
             }
             else
                 MessageBox.Show("Seleccione un Donante primero");
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+
         }
 
 
