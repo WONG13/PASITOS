@@ -46,8 +46,8 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(15, 20);
-            this.label1.Size = new System.Drawing.Size(652, 20);
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Size = new System.Drawing.Size(652, 31);
             this.label1.Text = "Aspirantes a Donantes";
             // 
             // groupBox1
@@ -77,7 +77,7 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.DG_Catalog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DG_Catalog.Location = new System.Drawing.Point(23, 20);
+            this.DG_Catalog.Location = new System.Drawing.Point(26, 19);
             this.DG_Catalog.Name = "DG_Catalog";
             this.DG_Catalog.ReadOnly = true;
             this.DG_Catalog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -193,12 +193,12 @@
             this.Name = "CatalogoAspirantesDcs";
             this.Size = new System.Drawing.Size(682, 551);
             this.Load += new System.EventHandler(this.CatalogoAspirantesDcs_Load);
+            this.Controls.SetChildIndex(this.groupBox3, 0);
+            this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.btnAceptar, 0);
             this.Controls.SetChildIndex(this.BtnCancelar, 0);
             this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.groupBox3, 0);
-            this.Controls.SetChildIndex(this.groupBox2, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DG_Catalog)).EndInit();
             this.groupBox3.ResumeLayout(false);

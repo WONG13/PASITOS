@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtNombretut = new System.Windows.Forms.TextBox();
+            this.txtDirecciontut = new System.Windows.Forms.TextBox();
+            this.txtTelefonotut = new System.Windows.Forms.TextBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CB_Parentesco = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,47 +49,50 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.CB_Parentesco);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dtpFecha);
-            this.groupBox1.Controls.Add(this.txtTelefono);
-            this.groupBox1.Controls.Add(this.txtDireccion);
-            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.txtTelefonotut);
+            this.groupBox1.Controls.Add(this.txtDirecciontut);
+            this.groupBox1.Controls.Add(this.txtNombretut);
             this.groupBox1.Location = new System.Drawing.Point(10, 26);
-            this.groupBox1.Size = new System.Drawing.Size(254, 238);
+            this.groupBox1.Size = new System.Drawing.Size(254, 182);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(108, 267);
+            this.btnAceptar.Location = new System.Drawing.Point(216, 214);
+            this.btnAceptar.Visible = false;
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(189, 267);
+            this.BtnCancelar.Location = new System.Drawing.Point(162, 214);
+            this.BtnCancelar.Visible = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // txtNombre
+            // txtNombretut
             // 
-            this.txtNombre.Location = new System.Drawing.Point(88, 22);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(132, 20);
-            this.txtNombre.TabIndex = 0;
+            this.txtNombretut.Location = new System.Drawing.Point(88, 22);
+            this.txtNombretut.Name = "txtNombretut";
+            this.txtNombretut.Size = new System.Drawing.Size(132, 20);
+            this.txtNombretut.TabIndex = 0;
             // 
-            // txtDireccion
+            // txtDirecciontut
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(88, 48);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(132, 20);
-            this.txtDireccion.TabIndex = 0;
+            this.txtDirecciontut.Location = new System.Drawing.Point(88, 48);
+            this.txtDirecciontut.Name = "txtDirecciontut";
+            this.txtDirecciontut.Size = new System.Drawing.Size(132, 20);
+            this.txtDirecciontut.TabIndex = 0;
             // 
-            // txtTelefono
+            // txtTelefonotut
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(88, 74);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(132, 20);
-            this.txtTelefono.TabIndex = 0;
+            this.txtTelefonotut.Location = new System.Drawing.Point(88, 74);
+            this.txtTelefonotut.Name = "txtTelefonotut";
+            this.txtTelefonotut.Size = new System.Drawing.Size(132, 20);
+            this.txtTelefonotut.TabIndex = 0;
             // 
             // dtpFecha
             // 
@@ -145,10 +148,11 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Telefono";
             // 
-            // comboBox1
+            // CB_Parentesco
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CB_Parentesco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_Parentesco.FormattingEnabled = true;
+            this.CB_Parentesco.Items.AddRange(new object[] {
             "Padre",
             "Madre",
             "Tio",
@@ -159,10 +163,10 @@
             "Hermana",
             "Primo",
             "Prima"});
-            this.comboBox1.Location = new System.Drawing.Point(89, 100);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 21);
-            this.comboBox1.TabIndex = 3;
+            this.CB_Parentesco.Location = new System.Drawing.Point(89, 100);
+            this.CB_Parentesco.Name = "CB_Parentesco";
+            this.CB_Parentesco.Size = new System.Drawing.Size(131, 21);
+            this.CB_Parentesco.TabIndex = 3;
             // 
             // I_NuevoTutor
             // 
@@ -178,15 +182,15 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.TextBox txtDirecciontut;
+        public System.Windows.Forms.TextBox txtNombretut;
+        public System.Windows.Forms.TextBox txtTelefonotut;
+        public System.Windows.Forms.DateTimePicker dtpFecha;
+        public System.Windows.Forms.ComboBox CB_Parentesco;
     }
 }

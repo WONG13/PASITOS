@@ -12,6 +12,6 @@ namespace PASITOS
         public string Direccion_Tut	{get; set;}
         public string Telefono_Tut	{get; set;}
         public string Parentesco_Tut {get; set;}
-        public DateTime FecNac_Tut { get; set; }
+        public string FecNac_Tut { get; set; }
     }
 }

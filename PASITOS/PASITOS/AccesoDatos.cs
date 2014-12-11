@@ -477,5 +477,10 @@ namespace PASITOS
             comando.ExecuteNonQuery();
             comando.Connection.Close();
         }
+
+        internal object ConsultaIDBeneficiario()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

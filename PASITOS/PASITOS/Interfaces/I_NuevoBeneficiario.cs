@@ -15,15 +15,26 @@ namespace PASITOS
 
         public bool Error;
         O_Beneficiario Obj_Ben;
+        O_Tutor Obj_Tut;
         AccesoDatos ObjAD = new AccesoDatos();
         DataTable ObjDT = new DataTable();
         DataTable Cargar;
+        int ID = -1;
+        int Forma = 0;
+        int Accion;
 
-        public I_NuevoBeneficiario()
+        public I_NuevoBeneficiario(int ID, int Forma, int Accion)
         {
             InitializeComponent();
             CB_GeneroCargar();
             dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+
+            this.Forma = Forma;
+            if (Accion == 1)
+            {
+                this.ID = ID;
+            }
+
         }
 
         private void CB_GeneroCargar()
@@ -54,11 +65,32 @@ namespace PASITOS
                 ErrorDatos.SetError(txtNecesidades, "Campo Vacio");
                 Error = true;
             }
+            if (i_NuevoTutor1.txtNombretut.Text == "")
+            {
+                ErrorDatos.SetError(i_NuevoTutor1.txtNombretut, "Campo Vacio");
+                Error = true;
+            }
+            if (i_NuevoTutor1.txtDirecciontut.Text == "")
+            {
+                ErrorDatos.SetError(i_NuevoTutor1.txtDirecciontut, "Campo Vacio");
+                Error = true;
+            }
+            if (i_NuevoTutor1.txtTelefonotut.Text == "")
+            {
+                ErrorDatos.SetError(i_NuevoTutor1.txtTelefonotut, "Campo Vacio");
+                Error = true;
+            }
+            if (i_NuevoTutor1.CB_Parentesco.Text == "")
+            {
+                ErrorDatos.SetError(i_NuevoTutor1.CB_Parentesco, "Campo Vacio");
+                Error = true;
+            }
 
             if (Error==false)
             {
                 CapturarDatos();
                 ObjAD.NuevoBeneficiario(Obj_Ben);
+                
 
                 MessageBox.Show("Beneficiario Agregado");
                 txtNombre.Clear();
@@ -66,6 +98,9 @@ namespace PASITOS
                 txtPadecimiento.Clear();
                 txtNecesidades.Clear();
                 txtNombre.Focus();
+
+                Obj_Tut.ID= ObjAD.ConsultaIDBeneficiario();
+                ObjAD.NuevoTutor(Obj_Tut);
             }
            
 
@@ -80,7 +115,18 @@ namespace PASITOS
             Obj_Ben.Genero_Ben = Int16.Parse(CB_Genero.SelectedValue.ToString());
             Obj_Ben.Padecimiento_Ben = txtPadecimiento.Text;
             Obj_Ben.Necesidad_Ben = txtNecesidades.Text;
+            Obj_Tut = new O_Tutor();
+            Obj_Tut.Nombre_Tut = i_NuevoTutor1.txtNombretut.Text;
+            Obj_Tut.Direccion_Tut = i_NuevoTutor1.txtDirecciontut.Text;
+            Obj_Tut.Telefono_Tut = i_NuevoTutor1.txtTelefonotut.Text;
+            Obj_Tut.Parentesco_Tut = i_NuevoTutor1.CB_Parentesco.Text;
+            Obj_Tut.FecNac_Tut =  i_NuevoTutor1.dtpFecha.Text;
+
+
+
+
         }
+
         I_MenuPrincipal MenuPrincipal;
         private void BtnCancelar_Click(object sender, EventArgs e)
         {

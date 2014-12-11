@@ -46,8 +46,8 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(15, 20);
-            this.label1.Size = new System.Drawing.Size(652, 20);
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Size = new System.Drawing.Size(652, 31);
             this.label1.Text = "Donantes";
             // 
             // groupBox1
@@ -65,10 +65,7 @@
             // BtnCancelar
             // 
             this.BtnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnCancelar.BackgroundImage")));
-            this.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnCancelar.Location = new System.Drawing.Point(619, 441);
-            this.BtnCancelar.Size = new System.Drawing.Size(48, 41);
-            this.BtnCancelar.Text = "";
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // DG_Catalog
@@ -79,7 +76,7 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.DG_Catalog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DG_Catalog.Location = new System.Drawing.Point(24, 20);
+            this.DG_Catalog.Location = new System.Drawing.Point(26, 19);
             this.DG_Catalog.Name = "DG_Catalog";
             this.DG_Catalog.ReadOnly = true;
             this.DG_Catalog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

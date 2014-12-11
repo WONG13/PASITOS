@@ -48,10 +48,12 @@
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(387, 149);
+            this.btnAceptar.Visible = false;
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.Location = new System.Drawing.Point(468, 149);
+            this.BtnCancelar.Visible = false;
             // 
             // dataGridView1
             // 
@@ -64,6 +66,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(6, 7);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(519, 88);
             this.dataGridView1.TabIndex = 0;
             // 
