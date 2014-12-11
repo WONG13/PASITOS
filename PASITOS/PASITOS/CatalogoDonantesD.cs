@@ -73,7 +73,7 @@ namespace PASITOS
         {
             if (ID > 0)
             {
-                NuevoContacto = new I_NuevoContacto(ID, 2);
+                NuevoContacto = new I_NuevoContacto(ID, 2,0);
                 NuevoContacto.DelP2 = DelP2;
                 DelP2(NuevoContacto);
             }
@@ -113,6 +113,38 @@ namespace PASITOS
             else
                 MessageBox.Show("Seleccione un Donante primero");
         }
+
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            catalagoContacto1.Forma = 2;
+            catalagoContacto1.DelP2 = DelP2;
+            catalagoContacto1.ActualizarContacto();
+            
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            ObjAD.EliminarDonante(ID);
+            MessageBox.Show("Donante Eliminado");
+            DesplegarGrid();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            catalagoContacto1.Forma = 2;
+            catalagoContacto1.DelP2 = DelP2;
+            catalagoContacto1.EliminarContacto();
+        }
+
+
+
+
+
+
+
 
      
     }

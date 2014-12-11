@@ -18,8 +18,8 @@ namespace PASITOS
         DataTable ObjDT = new DataTable();
         DataTable Cargar;
         public int x;
-
-        int ID;
+        //int Accion;
+        int ID=-1;
         int Forma=0;
         public I_NuevoDonante_Contacto(int ID, int Forma)
         {
@@ -90,7 +90,7 @@ namespace PASITOS
             if (Error == false)
             {
                 CapturarDatos();
-                if (ID == -1)
+                if (ID==-1)
                 {
                     ObjAD.NuevoDonante(Obj_Don);
 
@@ -106,7 +106,7 @@ namespace PASITOS
                     x = ObjAD.ConsultaIDDonante();
                     this.Visible = false;
 
-                    NuevoContacto = new I_NuevoContacto(x, 0);
+                    NuevoContacto = new I_NuevoContacto(x, 0,0);
                     NuevoContacto.DelP2 = DelP2;
                     DelP2(NuevoContacto);
                 }

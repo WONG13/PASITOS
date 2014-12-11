@@ -318,7 +318,7 @@ namespace PASITOS
 
             comando.Connection = A_AConexion.ObtenerConexion();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "  select ID_Donante,Nombre_Don,ID_Tipo_Don,Direccion_Don,RFC_Don,Info_Don From Donante where ID_Estatus=2";
+            comando.CommandText = "  select d.ID_Donante,d.Nombre_Don,t.TipoDon,d.Direccion_Don,d.RFC_Don,d.Info_Don From Donante d join TipoDonante t on t.ID_Tipo_Don=d.ID_Tipo_Don where ID_Estatus=2";
             SqlDataAdapter da = new SqlDataAdapter(comando);
             da.Fill(dTable);
 
@@ -337,7 +337,7 @@ namespace PASITOS
 
             comando.Connection = A_AConexion.ObtenerConexion();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "  select ID_Donante,Nombre_Don,ID_Tipo_Don,Direccion_Don,RFC_Don,Info_Don From Donante where ID_Estatus=1";
+            comando.CommandText = "  select d.ID_Donante,d.Nombre_Don,t.TipoDon,d.Direccion_Don,d.RFC_Don,d.Info_Don From Donante d join TipoDonante t on t.ID_Tipo_Don=d.ID_Tipo_Don where ID_Estatus=1";
             SqlDataAdapter da = new SqlDataAdapter(comando);
             da.Fill(dTable);
 
@@ -384,6 +384,94 @@ namespace PASITOS
             comando.Parameters.AddWithValue("@RFC_Don", D.RFC_Don);
             comando.Parameters.AddWithValue("@Info_Don", D.Info_Don);
             comando.Parameters.AddWithValue("@ID_Estatus", D.Estatus_Don);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+        }
+
+        internal DataTable ConsultaBusquedaContacto(int ID)
+        {
+            comando = new SqlCommand();
+            dTable = new DataTable();
+
+            comando.Connection = A_AConexion.ObtenerConexion();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = " select * from Contacto where ID_Contacto=@ID";
+
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+
+            comando.Parameters.AddWithValue("@ID", ID);
+            da.Fill(dTable);
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+            return dTable;
+        }
+        internal void EliminarDonante(int ID)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+            //comando.CommandType = CommandType.StoredProcedure;
+            comando.CommandText = "Delete From Contacto Where ID_Donante = @ID_Donante  " + 
+                "Delete From Donante Where ID_Donante = @ID_Donante ";
+
+            comando.Parameters.AddWithValue("@ID_Donante", ID);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+        }
+
+        internal void EliminarContacto(int ID)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+            //comando.CommandType = CommandType.StoredProcedure;
+            comando.CommandText = "Delete From Contacto Where ID_Contacto = @ID_Contacto ";
+
+            comando.Parameters.AddWithValue("@ID_Contacto", ID);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+        }
+
+        internal void ActualizarContacto(O_Contacto C, int ID)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+            //comando.CommandType = CommandType.StoredProcedure;
+
+            comando.CommandText =
+                "Update Contacto Set Nombre_Con=@Nombre_Con, Tel_Con=@Tel_Con, Correo_Con=@Correo_Con, Puesto_Con=@Puesto_Con, Cumpleaños_Con=@Cumpleaños_Con, Hora_Atencion=@Hora_Atencion,Info_Con=@Info_Con  where ID_Contacto=@ID";
+
+            comando.Parameters.AddWithValue("@ID", ID);
+            comando.Parameters.AddWithValue("@Nombre_Con", C.Nombre_Con);
+            comando.Parameters.AddWithValue("@Tel_Con",C.Tel_Con);
+            comando.Parameters.AddWithValue("@Correo_Con",C.Correo_Con);
+            comando.Parameters.AddWithValue("@Puesto_Con", C.Puesto_Con);
+            comando.Parameters.AddWithValue("@Cumpleaños_Con", C.Cumpleaños_Con);
+            comando.Parameters.AddWithValue("@Hora_Atencion",C.Hora_Atencion );
+            comando.Parameters.AddWithValue("@Info_Con", C.Info_Con);
+
+            comando.Connection.Open();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
+        }
+
+        internal void CambiarDeAspirante_a_Donante(int ID)
+        {
+            comando = new SqlCommand();
+            comando.Connection = A_AConexion.ObtenerConexion();
+            //comando.CommandType = CommandType.StoredProcedure;
+
+            comando.CommandText =
+                "Update Donante Set ID_Estatus=@ID_Estatus  where ID_Donante=@ID";
+
+            comando.Parameters.AddWithValue("@ID", ID);
+
+            comando.Parameters.AddWithValue("@ID_Estatus", 1);
 
             comando.Connection.Open();
             comando.ExecuteNonQuery();

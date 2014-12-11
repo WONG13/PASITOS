@@ -16,17 +16,37 @@ namespace PASITOS
         O_Contacto Obj_Con;
         AccesoDatos ObjAD = new AccesoDatos();
         DataTable ObjDT = new DataTable();
-        int x;
-        int Forma;
 
-        public I_NuevoContacto(int x, int Forma)
+        int Forma=0;
+        int Accion;
+        int ID = -1;
+        public I_NuevoContacto(int ID, int Forma, int Accion)
         {
             InitializeComponent();
             dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-           this.x = x;
+            this.Accion = Accion;
+           this.ID = ID;
            this.Forma = Forma;
+           if (Forma != 0&& Accion==1)
+           {
+               
+               CargarDatos(ID);
+           }
+            
         }
 
+        private void CargarDatos(int ID)
+        {
+            ObjDT = ObjAD.ConsultaBusquedaContacto(ID);
+
+            txtNombre.Text = ObjDT.Rows[0][2].ToString();
+            txtTelefono.Text=ObjDT.Rows[0][3].ToString();
+            txtCorreo.Text=ObjDT.Rows[0][4].ToString();
+            txtPuesto.Text=ObjDT.Rows[0][5].ToString();
+            dateTimePicker1.Text=ObjDT.Rows[0][6].ToString();
+            txtHoraAten.Text=ObjDT.Rows[0][7].ToString();
+            txtInformacion.Text=ObjDT.Rows[0][8].ToString();
+        }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -61,7 +81,10 @@ namespace PASITOS
 
             if (Error == false)
             {
-                CapturarDatos();                
+
+                CapturarDatos();              
+                if (Accion==0)
+                {
                 ObjAD.NuevoContacto(Obj_Con);
 
                 MessageBox.Show("Contacto Agregado");
@@ -72,6 +95,13 @@ namespace PASITOS
                 txtHoraAten.Clear();
                 txtInformacion.Clear();
                 txtNombre.Focus();
+                }
+                else
+                {
+                    ObjAD.ActualizarContacto(Obj_Con, ID);
+                    MessageBox.Show("Datos Actualizados");
+                    RegresoForma();
+                }
             }
         }
 
@@ -80,7 +110,7 @@ namespace PASITOS
         private void CapturarDatos()
         {
             Obj_Con = new O_Contacto();
-            Obj_Con.ID_Donante = x;
+            Obj_Con.ID_Donante = ID;
             Obj_Con.Nombre_Con = txtNombre.Text;
             Obj_Con.Tel_Con = txtTelefono.Text;
             Obj_Con.Correo_Con = txtCorreo.Text;
@@ -94,34 +124,38 @@ namespace PASITOS
         CatalogoDonantesD CatalogoDonantes;
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            switch (Forma)
-            { 
-                case 0:
-                        MenuPrincipal = new I_MenuPrincipal();
-                        MenuPrincipal.DelP2 = DelP2;
-                        DelP2(MenuPrincipal);
-                    break;
-
-                    // CatalogoAspirantesD
-                case 1:
-                        CatalogoAspirantes = new CatalogoAspirantesDcs();
-                        CatalogoAspirantes.DelP2 = DelP2;
-                        DelP2(CatalogoAspirantes);
-                    break;
-                    // CatalogoDonantesD
-                case 2:
-                        CatalogoDonantes = new CatalogoDonantesD();
-                        CatalogoDonantes.DelP2 = DelP2;
-                        DelP2(CatalogoDonantes);
-                    break;
-
-
-            }
+            RegresoForma();
+           
 
          
         }
 
-        
+        private void RegresoForma()
+        {
+            switch (Forma)
+            {
+                case 0:
+                    MenuPrincipal = new I_MenuPrincipal();
+                    MenuPrincipal.DelP2 = DelP2;
+                    DelP2(MenuPrincipal);
+                    break;
+
+                // CatalogoAspirantesD
+                case 1:
+                    CatalogoAspirantes = new CatalogoAspirantesDcs();
+                    CatalogoAspirantes.DelP2 = DelP2;
+                    DelP2(CatalogoAspirantes);
+                    break;
+                // CatalogoDonantesD
+                case 2:
+                    CatalogoDonantes = new CatalogoDonantesD();
+                    CatalogoDonantes.DelP2 = DelP2;
+                    DelP2(CatalogoDonantes);
+                    break;
+
+
+            }
+        }
 
     }
 }

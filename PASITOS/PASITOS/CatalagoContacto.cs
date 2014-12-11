@@ -11,12 +11,17 @@ namespace PASITOS
 {
     public partial class CatalagoContacto : PASITOS.I_Plantilla, iModulo
     {
+       public  DelegadoP2 DelP2;
         DelegadoCon DelCon;
         AccesoDatos ObjAD = new AccesoDatos();
         public O_Donante donante;
+        public int Forma=0;
+        int ID=-1;
         public CatalagoContacto()
         {
             InitializeComponent();
+            
+
             
         }
 
@@ -25,14 +30,6 @@ namespace PASITOS
             dataGridView1.DataSource=ObjAD.ConsultarContatoPorDonanteID(ID);
         }
 
-        //public void Desmarcar()
-        //{
-        //    if (dataGridView1.CurrentRow != null)
-        //    {
-        //        dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Selected = false;
-        //        btnAceptar.Visible = false;
-        //    }
-        //}
         private void btnAceptar_Click(object sender, EventArgs e)
         {
 
@@ -40,6 +37,29 @@ namespace PASITOS
 
 
         }
+        I_NuevoContacto NuevoContacto;
+        public void ActualizarContacto()
+        {
+            if (ID > 0)
+            {
+                NuevoContacto = new I_NuevoContacto(ID, Forma,1);
+                NuevoContacto.DelP2 = DelP2;
+                DelP2(NuevoContacto);
+            }
+            else
+                MessageBox.Show("Seleccione un Contacto primero");
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                ID = ((DataTable)dataGridView1.DataSource).Rows[e.RowIndex].Field<int>("ID_Contacto");//e.RowIndex
+            }
+        }
+
+
+
 
         //private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         //{
@@ -47,5 +67,18 @@ namespace PASITOS
         //    DelCon = new DelegadoCon(CD.DesmarcarGrid);
         //    DelCon();
         //}
+
+        internal void EliminarContacto()
+        {
+            if (ID > 0)
+            {
+                ObjAD.EliminarContacto(ID);
+                MessageBox.Show("Contacto Eliminado");
+
+                dataGridView1.DataSource = ObjAD.ConsultarContatoPorDonanteID(ID);
+            }
+            else
+                MessageBox.Show("Seleccione un Contacto primero");
+        }
     }
 }

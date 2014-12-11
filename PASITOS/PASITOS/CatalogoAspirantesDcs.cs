@@ -51,13 +51,13 @@ namespace PASITOS
             MenuPrincipal.DelP2 = DelP2;
             DelP2(MenuPrincipal);
         }
-        I_NuevoContacto NuevoContacto;
-        private void BtnNuevoContacto_Click(object sender, EventArgs e)
-        {
-            NuevoContacto = new I_NuevoContacto(ID,1);
-            NuevoContacto.DelP2 = DelP2;
-            DelP2(NuevoContacto);
-        }
+        //I_NuevoContacto NuevoContacto;
+        //private void BtnNuevoContacto_Click(object sender, EventArgs e)
+        //{
+        //    NuevoContacto = new I_NuevoContacto(ID,1,0);
+        //    NuevoContacto.DelP2 = DelP2;
+        //    DelP2(NuevoContacto);
+        //}
 
         private void DG_Catalog_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -74,6 +74,66 @@ namespace PASITOS
                 ID = ((DataTable)DG_Catalog.DataSource).Rows[e.RowIndex].Field<int>("ID_Donante");//e.RowIndex
                 catalagoContacto1.Cargar(ID);
             }
+        }
+        I_NuevoDonante_Contacto NuevoDonante;
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+
+            if (ID > 0)
+            {
+                NuevoDonante = new I_NuevoDonante_Contacto(ID, 1);
+                NuevoDonante.DelP2 = DelP2;
+                DelP2(NuevoDonante);
+            }
+            else
+                MessageBox.Show("Seleccione un Donante primero");
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            ObjAD.EliminarDonante(ID);
+            MessageBox.Show("Donante Eliminado");
+            DesplegarGrid();
+            catalagoContacto1.dataGridView1.DataSource = null;
+
+        }
+        I_NuevoContacto NuevoContacto;
+        private void BtnNuevoContacto_Click_1(object sender, EventArgs e)
+        {
+            if (ID > 0)
+            {
+                NuevoContacto = new I_NuevoContacto(ID, 1, 0);
+                NuevoContacto.DelP2 = DelP2;
+                DelP2(NuevoContacto);
+            }
+            else
+                MessageBox.Show("Seleccione un Donante primero");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            catalagoContacto1.Forma = 1;
+            catalagoContacto1.DelP2 = DelP2;
+            catalagoContacto1.EliminarContacto();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            catalagoContacto1.Forma = 1;
+            catalagoContacto1.DelP2 = DelP2;
+            catalagoContacto1.ActualizarContacto();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (ID > 0)
+            {
+                ObjAD.CambiarDeAspirante_a_Donante(ID);
+                MessageBox.Show("Cambio Realizado");
+                DesplegarGrid();
+            }
+            else
+                MessageBox.Show("Selecciona Donante Primero");
         }
 
 

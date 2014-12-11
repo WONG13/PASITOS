@@ -47,7 +47,10 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(569, 165);
+            this.btnAceptar.Location = new System.Drawing.Point(458, 165);
+            this.btnAceptar.Size = new System.Drawing.Size(121, 23);
+            this.btnAceptar.Text = "Actualizar Contacto";
+            this.btnAceptar.Visible = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // BtnCancelar
@@ -64,8 +67,10 @@
             this.dataGridView1.Location = new System.Drawing.Point(20, 9);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(615, 118);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // CatalagoContacto
             // 

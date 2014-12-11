@@ -75,12 +75,12 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(392, 325);
+            this.btnAceptar.Location = new System.Drawing.Point(497, 344);
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(473, 325);
+            this.BtnCancelar.Location = new System.Drawing.Point(443, 344);
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // txtPuesto
@@ -206,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.Name = "I_NuevoContacto";
-            this.Size = new System.Drawing.Size(560, 360);
+            this.Size = new System.Drawing.Size(560, 406);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorDatos)).EndInit();

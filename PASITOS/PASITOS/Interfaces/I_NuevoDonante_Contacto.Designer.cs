@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(I_NuevoDonante_Contacto));
             this.label9 = new System.Windows.Forms.Label();
             this.CB_Estatus = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,16 +68,21 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(15, 45);
-            this.groupBox1.Size = new System.Drawing.Size(530, 274);
+            this.groupBox1.Size = new System.Drawing.Size(530, 261);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(392, 325);
+            this.btnAceptar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAceptar.BackgroundImage")));
+            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAceptar.Location = new System.Drawing.Point(497, 324);
+            this.btnAceptar.Size = new System.Drawing.Size(48, 42);
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(473, 325);
+            this.BtnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnCancelar.BackgroundImage")));
+            this.BtnCancelar.Location = new System.Drawing.Point(445, 324);
+            this.BtnCancelar.Size = new System.Drawing.Size(46, 42);
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // label9
@@ -95,7 +101,7 @@
             this.CB_Estatus.Location = new System.Drawing.Point(128, 118);
             this.CB_Estatus.Name = "CB_Estatus";
             this.CB_Estatus.Size = new System.Drawing.Size(229, 21);
-            this.CB_Estatus.TabIndex = 23;
+            this.CB_Estatus.TabIndex = 4;
             // 
             // label8
             // 
@@ -121,21 +127,21 @@
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.Size = new System.Drawing.Size(229, 98);
-            this.txtInfo.TabIndex = 19;
+            this.txtInfo.TabIndex = 5;
             // 
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(128, 66);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(229, 20);
-            this.txtDireccion.TabIndex = 18;
+            this.txtDireccion.TabIndex = 2;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(128, 13);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(230, 20);
-            this.txtNombre.TabIndex = 17;
+            this.txtNombre.TabIndex = 0;
             // 
             // label4
             // 
@@ -171,14 +177,14 @@
             this.CB_TipoDon.Location = new System.Drawing.Point(128, 39);
             this.CB_TipoDon.Name = "CB_TipoDon";
             this.CB_TipoDon.Size = new System.Drawing.Size(229, 21);
-            this.CB_TipoDon.TabIndex = 26;
+            this.CB_TipoDon.TabIndex = 1;
             // 
             // txtRFC
             // 
             this.txtRFC.Location = new System.Drawing.Point(128, 92);
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(229, 20);
-            this.txtRFC.TabIndex = 27;
+            this.txtRFC.TabIndex = 3;
             // 
             // ErrorDatos
             // 
@@ -189,7 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.Name = "I_NuevoDonante_Contacto";
-            this.Size = new System.Drawing.Size(560, 360);
+            this.Size = new System.Drawing.Size(560, 395);
             this.Load += new System.EventHandler(this.I_NuevoDonante_Contacto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
