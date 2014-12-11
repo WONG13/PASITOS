@@ -122,3 +122,10 @@ ID_Benefiario int,
 ID_Tutor int,
 PRIMARY KEY (ID_Relacion)
 )
+
+
+SELECT b.ID_Beneficiario,b.Nombre_Ben,b.Fec_Nac_Ben,g.Genero,b.Padecimiento_Ben,b.Necesidad_Ben,* FROM Tutor T
+JOIN RELACIONTUTOR R ON T.ID_Tutor=R.ID_Tutor
+JOIN Beneficiario B ON R.ID_Benefiario=B.ID_Beneficiario
+join genero g on g.ID_Genero=b.ID_Genero_Ben
+WHERE B.ID_Beneficiario=9

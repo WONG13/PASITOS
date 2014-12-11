@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDonaciones = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgenda = new System.Windows.Forms.Button();
             this.BtnNinos = new System.Windows.Forms.Button();
             this.BtnDonante = new System.Windows.Forms.Button();
-            this.btnDonaciones = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,18 @@
             this.groupBox1.Size = new System.Drawing.Size(180, 360);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // btnDonaciones
+            // 
+            this.btnDonaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDonaciones.Location = new System.Drawing.Point(24, 209);
+            this.btnDonaciones.Name = "btnDonaciones";
+            this.btnDonaciones.Size = new System.Drawing.Size(130, 48);
+            this.btnDonaciones.TabIndex = 3;
+            this.btnDonaciones.Text = "Donaciones";
+            this.btnDonaciones.UseVisualStyleBackColor = true;
+            this.btnDonaciones.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -75,6 +87,7 @@
             this.btnAgenda.TabIndex = 2;
             this.btnAgenda.Text = "Agenda";
             this.btnAgenda.UseVisualStyleBackColor = true;
+            this.btnAgenda.Click += new System.EventHandler(this.btnAgenda_Click);
             // 
             // BtnNinos
             // 
@@ -99,18 +112,6 @@
             this.BtnDonante.Text = "Donantes";
             this.BtnDonante.UseVisualStyleBackColor = true;
             this.BtnDonante.Click += new System.EventHandler(this.BtnDonante_Click);
-            // 
-            // btnDonaciones
-            // 
-            this.btnDonaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDonaciones.Location = new System.Drawing.Point(24, 209);
-            this.btnDonaciones.Name = "btnDonaciones";
-            this.btnDonaciones.Size = new System.Drawing.Size(130, 48);
-            this.btnDonaciones.TabIndex = 3;
-            this.btnDonaciones.Text = "Donaciones";
-            this.btnDonaciones.UseVisualStyleBackColor = true;
-            this.btnDonaciones.Click += new System.EventHandler(this.button1_Click);
             // 
             // MenuPrincipal_P1
             // 

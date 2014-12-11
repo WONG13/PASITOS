@@ -83,11 +83,23 @@
     <Compile Include="Interfaces\I_CatalogoDonativo.Designer.cs">
       <DependentUpon>I_CatalogoDonativo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\I_NuevoEvento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_NuevoEvento.designer.cs">
+      <DependentUpon>I_NuevoEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\I_NuevoTutor.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Interfaces\I_NuevoTutor.Designer.cs">
       <DependentUpon>I_NuevoTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="I_Agenda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="I_Agenda.designer.cs">
+      <DependentUpon>I_Agenda.cs</DependentUpon>
     </Compile>
     <Compile Include="I_FormaPrincipal.cs">
       <SubType>Form</SubType>
@@ -161,6 +173,7 @@
     <Compile Include="MenuPrincipal_P1.Designer.cs">
       <DependentUpon>MenuPrincipal_P1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Objetos\Evento.cs" />
     <Compile Include="Objetos\O_Contacto.cs" />
     <Compile Include="Objetos\O_RegistroDonativo.cs" />
     <Compile Include="Objetos\O_Beneficiario.cs" />
@@ -188,8 +201,14 @@
     <EmbeddedResource Include="Interfaces\I_CatalogoDonativo.resx">
       <DependentUpon>I_CatalogoDonativo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\I_NuevoEvento.resx">
+      <DependentUpon>I_NuevoEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\I_NuevoTutor.resx">
       <DependentUpon>I_NuevoTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I_Agenda.resx">
+      <DependentUpon>I_Agenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="I_FormaPrincipal.resx">
       <DependentUpon>I_FormaPrincipal.cs</DependentUpon>
